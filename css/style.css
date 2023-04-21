@@ -130,34 +130,40 @@ img.placeholder { display: inline-block; margin: 50px 0;}
     object-position: center;
 }
 
-/* Cambiamente */
+/* Cambiamente inizia */
 .poster-wrapper h1 {
     font-family: "JustAnotherHand"; /*'alek';*/
     font-size: 150px;
     color: rgba(255,255,255,.8);
 }
+
 .poster-wrapper .cat {
     text-transform: uppercase;
     font-size: 22px;
     letter-spacing: 1px;
     padding-right: 50px;
+    margin-bottom: 30px;
 }
 .poster-wrapper .title-extended{
     font-size: 18px;
     color: #FFFFFF;
     font-weight: 600;
 }
+
 .poster-wrapper .title-extended h1 {
-    font-size: 84px;
-    color: #FFFFFF;
+    font-size: 9vw;
     line-height: .7;
     padding-right: 50px;
-    margin-top: 6x;
+    margin-top: 6px;
     letter-spacing: 2px;
+    color: rgba(255,255,255,.8);
 }
 .poster-wrapper .eyelet {
-    margin-top: 20px;
+    margin-top: 30px;
+    font-size: 20px;
 }
+/* Cambiamente finisce */
+
 
 .breadcrumbs { border-bottom: 1px solid #ccc; margin-bottom: 60px;}
 .breadcrumbs ul { margin: 5px 0;}
@@ -203,15 +209,21 @@ img.placeholder { display: inline-block; margin: 50px 0;}
         font-size: 9vw; /* 14.5 */
     }
 }
+
+/* Cambiamnete */
 @media (max-width: 991px) {
     .poster-wrapper .cat, .poster-wrapper .title-extended h1 {
         text-align: left;
+    }
+    .poster-wrapper .eyelet, .poster-wrapper .cat {
+        margin-top: 20px;
     }
     .poster-wrapper .eyelet { padding-top: 10px;}
         .poster-wrapper .breadcrumbs {
         margin-top: 30px;
     }
 }
+
 @media (max-width: 767px) {
     .poster-wrapper .title-extended h1 {
         font-size: 9vw;
