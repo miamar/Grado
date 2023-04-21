@@ -1,0 +1,118 @@
+.main-header {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.eventi-home h3{
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+}
+.eventi-home p {
+    font-family: "Raleway", sans-serif;
+}
+
+@media (max-width: 1199px) {
+    /* Menu */
+    .cd-primary-nav,
+    .cd-secondary-nav {
+        padding-top: 14px;
+    }
+
+    .cd-main-header {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+@media (max-width: 767px){
+    /* Home -- Video */
+    .home-video--modify .meteo {
+        bottom: -142px;
+        left: 0;
+        right: 0;
+        margin: 0;
+        width: 100%;
+        background-color: rgba(0, 84, 160, 0.67);
+    }
+    .home-video--modify+.text-content {
+        margin-top: 180px;
+    }
+    .contenuti-attivita--modify p{
+        font-size: 18px;
+    }
+    /* Capital Letter */
+    .accent-text::first-letter{
+        font-size: 56px !important;
+    }
+    /* Hotel -- Filtri */
+    .filter-schede .wrapper-select:first-child{
+        margin-bottom: 24px;
+    }
+    /* Tabelle */
+    .table-responsive{
+        border: none;
+    }
+    .table-responsive table {
+        width: 100% !important;
+        min-width: 500px;
+    }
+    /* Breadcrumbs */
+    .breadcrumbs {
+        margin-bottom: 40px;
+    }
+    /* Spiaggie */
+    .template-spiagge .tab-list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .template-spiagge .tab-list .tab {
+        margin: 0;
+        width: 100%;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+    }
+    .template-spiagge .tab-list .tab a {
+        width: 100%;
+        display: block;
+        border: 1px solid #009ade;
+        padding: 8px;
+        font-size: 14px;
+    }
+    .template-spiagge .tab-list .tab.active-tab a {
+        background-color: #009ade;
+    }
+    .template-spiagge .filter-spiaggia {
+        overflow-x: scroll;
+    }
+    .template-spiagge .filter-spiaggia form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .template-spiagge .filter-spiaggia form label {
+        margin-left: 0;
+        white-space: nowrap;
+    }
+    .template-spiagge .filter-spiaggia form label:last-child .toggle {
+        margin-right: 10px;
+    }
+}
+@media (max-width: 575px){
+    #home-newsletter .mc-field-group {
+        width: 100%;
+    }
+    #home-newsletter .mc-field-group ul {
+        width: 100%;
+    }
+    #home-newsletter .mc-field-group li {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    #home-newsletter .mc-field-group li label {
+        max-width: 300px;
+    }
+    .servizi-spiaggia {
+        height: 400px !important;
+    }
+}

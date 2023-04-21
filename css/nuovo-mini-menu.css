@@ -1,0 +1,92 @@
+.main-header .primary-nav>li>a {
+    font-size: 14px;
+  }
+  .main-header .children .secondary-nav {
+    top: 100px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-shadow: none;
+    border-top: solid 3px #009ADE;
+    display: flex;
+    padding: 40px 56px;
+    background-color: #fff;
+  }
+  .main-header .children .secondary-nav li {
+    float: none;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    text-align: initial;
+  }
+  .main-header .children .secondary-nav li:before {
+    content: none;
+  }
+  .main-header .children .secondary-nav .title {
+    width: 45%;
+    margin-right: 32px;
+  }
+  .main-header .children .secondary-nav .title h6 {
+    color: #009ADE;
+    font-size: 32px;
+    margin-bottom: 18px;
+    max-width: 250px;
+  }
+  .main-header .children .secondary-nav .title p {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .main-header .children .secondary-nav .menu-items .card {
+    position: relative;
+    padding: 16px;
+    min-height: 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+  }
+  .main-header .children .secondary-nav .menu-items .card .item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(352.15deg, #0054A0 15.14%, #009ADE 52.72%, #F4B300 94.22%);
+    opacity: 0.35;
+    z-index: 1;
+  }
+  .main-header .children .secondary-nav .menu-items .card p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 16px;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 0 0 16px #000;
+  }
+  .main-header .children .secondary-nav .menu-items .card .streatched-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+
+  /* 
+  .main-header .children .secondary-nav .menu-items .card:hover {
+    box-shadow: 1px 1px 16px rgba(0,0,0,25%);
+    transform: scale(1.02);
+  }
+  */
+  
+ /* Cambiamente */
+  .main-header .children .secondary-nav .menu-items .card:hover {
+    border: 3px solid #009ADE;
+  }

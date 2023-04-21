@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'alek';
+    src: url('fonts/alek_regular_italic-webfont.woff2') format('woff2'),
+         url('fonts/alek_regular_italic-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'alek';
+    src: url('fonts/alek_bold_italic-webfont.woff2') format('woff2'),
+         url('fonts/alek_bold_italic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'alek';
+    src: url('fonts/alek_regular-webfont.woff2') format('woff2'),
+         url('fonts/alek_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'alek';
+    src: url('fonts/alek_bold-webfont.woff2') format('woff2'),
+         url('fonts/alek_bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'alek_ornaments';
+    src: url('fonts/alek_ornaments-webfont.woff2') format('woff2'),
+         url('fonts/alek_ornaments-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Cambiamente */
+@font-face {
+    font-family: 'JustAnotherHand';
+    src: url('/fonts/JustAnotherHand-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}

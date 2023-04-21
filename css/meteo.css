@@ -1,0 +1,55 @@
+.meteo .icon { 
+    display: inline-block;
+    width: 40px; 
+    height: 40px;
+    background-image: url(../img/meteo-icons.png);
+    background-repeat: no-repeat;
+    background-size: 174px;
+}
+
+   
+.cloud, .icon-02n { background-position: 0 0;  } 
+.cloud2, .icon-03d, .icon-03n{ background-position: 0 -67px;  } 
+.cloud3{ background-position: 0 -134px;  } 
+.cloud4{ background-position: 0 -201px;  } 
+.cloud5{ background-position: 0 -268px;  } 
+.cloudy, .icon-02d { background-position: 0 -335px;  } 
+.cloudy2, .icon-04d, .icon-04n { background-position: 0 -402px;  } 
+.cloudy3{ background-position: 0 -469px;  } 
+.cloudy4{ background-position: 0 -536px;  } 
+.compass{ background-position: 0 -603px;  } 
+.lightning{ background-position: 0 -670px;  } 
+.lightning2{ background-position: 0 -737px;  } 
+.lightning3, .icon-11d, .icon-11n { background-position: 0 -804px;  } 
+.lightning4{ background-position: 0 -871px;  } 
+.lightning5{ background-position: 0 -938px;  } 
+.lines, .icon-50d, .icon-50n { background-position: 0 -1005px;  } 
+.moon, .icon-01n { background-position: -67px 0;  } 
+.moon2{ background-position: -67px -67px;  } 
+.none{ background-position: -67px -134px;  } 
+.rainy, .icon-10d, .icon-10n { background-position: -67px -201px;  } 
+.rainy2, .icon-09d, .icon-09n { background-position: -67px -268px;  } 
+.rainy3{ background-position: -67px -335px;  } 
+.rainy4{ background-position: -67px -402px;  } 
+.snowflake{ background-position: -67px -469px;  } 
+.snowy{ background-position: -67px -536px;  } 
+.snowy2{ background-position: -67px -603px;  } 
+.snowy3, .icon-13d, .icon-13n{ background-position: -67px -670px;  }
+.snowy4{ background-position: -67px -737px;  } 
+.snowy5{ background-position: -67px -804px;  } 
+.sun, .icon-01d{ background-position: -67px -871px;  } 
+.sun2{ background-position: -67px -938px;  } 
+.sun3{ background-position: -67px -1005px;  } 
+.sunrise{ background-position: -134px 0;  } 
+.thermometer{ background-position: -134px -67px;  } 
+.weather{ background-position: -134px -134px;  } 
+.weather2{ background-position: -134px -201px;  } 
+.weather3{ background-position: -134px -268px;  } 
+.weather4{ background-position: -134px -335px;  } 
+.weather5{ background-position: -134px -402px;  } 
+.wind{ background-position: -134px -469px;  } 
+.windy{ background-position: -134px -536px;  } 
+.windy2{ background-position: -134px -603px;  } 
+.windy3{ background-position: -134px -670px;  } 
+.windy4{ background-position: -134px -737px;  } 
+.windy5{ background-position: -134px -804px;  }

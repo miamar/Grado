@@ -1,0 +1,71 @@
+#bannerSocialProof {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    z-index: 1000;
+    background-color: #fff;
+    transform: translateY(-50%);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+#bannerSocialProof .content{
+    width: 350px!important;
+}
+
+#bannerSocialProof .content i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+    margin: 4px 4px 0 0;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+#bannerSocialProof .content i:hover {
+    background-color: #f9f9f9;
+}
+
+#bannerSocialProof .content a{
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    display: -webkit-flex;
+}
+
+#bannerSocialProof .content img {
+    height: 65px;
+    min-width: 65px;
+    margin-right: 12px;
+}
+
+#bannerSocialProof .content div h6 {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+#bannerSocialProof .content div p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+@media screen and (max-width: 767.98px) {
+    #bannerSocialProof {
+        top: inherit;
+        left: 0;
+        bottom: 0;
+        transform: translateY(0);
+        border-radius: 0;
+    }
+    #bannerSocialProof .content img {
+        height: 45px;
+        min-width: 45px;
+    }
+}

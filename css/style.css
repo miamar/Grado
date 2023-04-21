@@ -1,0 +1,4287 @@
+@font-face {
+    font-family: 'AmaticBold';
+    src: url('AmaticSC-Bold.ttf') format('truetype');
+}
+
+body, .cms-editor {
+    font-family: 'raleway', sans-serif;
+    background: #f2f2f2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    color: #595959;
+    line-height: 1.6;
+}
+.cms-editor { padding-top: 50px; background: #fff; }
+
+@media (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+.px-0 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.no-gutters > [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.cd-search { 
+    background: #fff none repeat scroll 0 0;
+    left: 50%;
+    margin: 0 auto;
+    position: fixed;
+    transform: translateX(-50%);
+}
+.cd-search input { padding: 0; box-shadow: none;}
+
+
+b, strong {
+    font-weight: 600;
+}
+img { max-width: 100%;}
+video { display: block;}
+img.placeholder { display: inline-block; margin: 50px 0;}
+
+.cd-main-header {
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    width: 100%;
+    background: none;
+    /*
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1440px;
+    */
+    
+    margin: 0 auto;
+    
+    transition: all .3s;
+}
+.noposter main {
+    padding-top: 100px;
+}
+@media all and (min-width: 767px) {
+    .noposter main {
+        padding-top: 80px;
+    }
+}
+.big-container {
+    width: 95%;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .big-container {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .big-container {
+    width: 940px;
+  }
+}
+@media (min-width: 1200px) {
+  .big-container {
+    width: 1140px;
+  }
+}
+
+.content-box {
+    margin: 0 auto;
+    /*max-width: 1440px;*/
+}
+.content-box {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    position: relative;
+}
+
+.poster-wrapper { position: relative; background: #eee;}
+.poster-background {
+    background-position: center center;
+    background-size: cover;
+    height: 75vh;
+}
+.poster-wrapper .overlay-message {
+    position: absolute;
+    left: 0;
+    bottom: 18%;
+    width: 100%;
+    line-height: 1.2;
+    z-index: 100;
+   
+}
+.poster-wrapper img { 
+    width: 100%;
+    max-height: 75vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Cambiamente */
+.poster-wrapper h1 {
+    font-family: "JustAnotherHand"; /*'alek';*/
+    font-size: 150px;
+    color: rgba(255,255,255,.8);
+}
+.poster-wrapper .cat {
+    text-transform: uppercase;
+    font-size: 22px;
+    letter-spacing: 1px;
+    padding-right: 50px;
+}
+.poster-wrapper .title-extended{
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+.poster-wrapper .title-extended h1 {
+    font-size: 84px;
+    color: #FFFFFF;
+    line-height: .7;
+    padding-right: 50px;
+    margin-top: 6x;
+    letter-spacing: 2px;
+}
+.poster-wrapper .eyelet {
+    margin-top: 20px;
+}
+
+.breadcrumbs { border-bottom: 1px solid #ccc; margin-bottom: 60px;}
+.breadcrumbs ul { margin: 5px 0;}
+.breadcrumbs li, .breadcrumbs a {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    color: #595959;
+    /* padding: 5px 0; */
+}
+.breadcrumbs li:not(:first-child):before { content: '/'; margin: 0 5px;}
+
+
+/* Initiative */
+
+.initiative-wrapper {
+    background-color: #009add;
+    color: #FFF;
+    padding: 50px !important;
+}
+
+.initiative-wrapper p {
+    margin-bottom: 20px;
+}
+
+.initiative-wrapper strong {
+    font-weight: bold;
+}
+
+.initiative-wrapper .btn-default {
+    margin: 0 auto;
+    display: inline-block;
+    border-radius: 0;
+    border: 1px solid #FFF;
+    color: #FFF;
+    background-color: #f5b300;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 1440px) {
+    .poster-wrapper h1 {
+        font-size: 9vw; /* 14.5 */
+    }
+}
+@media (max-width: 991px) {
+    .poster-wrapper .cat, .poster-wrapper .title-extended h1 {
+        text-align: left;
+    }
+    .poster-wrapper .eyelet { padding-top: 10px;}
+        .poster-wrapper .breadcrumbs {
+        margin-top: 30px;
+    }
+}
+@media (max-width: 767px) {
+    .poster-wrapper .title-extended h1 {
+        font-size: 9vw;
+    }
+    .poster-background .title-extended h1 {
+        font-size: 9vw;
+    }
+    .poster-wrapper .cat {
+        font-size: 16px;
+    }
+}
+
+
+
+.poster-wrapper:after {
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+    background: rgba(0,0,0,0.15);
+    background: linear-gradient(-180deg, rgba(0,0,0,0.35) 3%, rgba(0,0,0,0.10) 100%); 
+}
+
+.fixed-banner {
+    position: fixed;
+    bottom: -1px;
+    display: block;
+    z-index: 1000;
+}
+
+.umbrella_back{
+    background-image: url(../img/ombrellone-deu2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 80px;
+    width: 198px;
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+    padding-top: 30px;
+    text-align: left;
+    padding-left: 20px;
+    letter-spacing: 0;
+}
+
+.fixed-left {
+    left: 0;
+}
+
+.fixed-right {
+    right: 0;
+}
+
+@media all and (max-width: 991px) {
+
+    .fixed-banner {
+        display: none;
+    }
+
+}
+
+/*
+ * HOME PAGE
+ */
+
+.home h3 {
+    color: #595959;
+    line-height: 1.3;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.home h3 .link-highlighted {
+    background-color: #009ade;
+    color: #FFF;
+    padding: 2px 4px;
+    text-decoration: none;
+}
+
+.home h3 .link-highlighted:hover {
+    background-color: #F4B300;
+}
+
+.home-poster { 
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #eee;
+    /* background: url('../img/home-poster.jpg') no-repeat center center / cover;*/
+}
+.home-poster > div.item {
+    height: 100%;
+    width: 100%;
+    background: no-repeat center center / cover;
+    z-index: 50;
+}
+.home-poster > .overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(352.15deg, #0054A0 15.14%, #009ADE 52.72%, #F4B300 94.22%);
+    z-index: 100;
+    opacity: 0.25;
+}
+.home-poster .overlay-message {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    line-height: 1.2;
+    z-index: 200;
+}
+.home-poster small {
+    font-size: 11px;
+    font-family: raleway;
+    display: block;
+}
+
+/* Cambiamente */
+.home-poster .welcome {
+    font-family: 'JustAnotherHand';
+    font-size: 60px;
+    color: #FFFFFF;
+    letter-spacing: -0.5px;
+    line-height: 1;
+}
+
+.home-poster .meteo {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -170px;
+    z-index: 200;
+    color: #fff;
+    text-transform: uppercase;
+    width: 340px;
+    background: rgba(0,0,0,.3);
+    text-align: center;
+}
+
+.home-poster .meteo > img {
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    animation: shake 5s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translateX(-50%) translate3d(0, 0, 0);
+    width: 23px;
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: translateX(-50%) translate3d(0, -1px, 0);
+    }
+    
+    20%, 80% {
+      transform: translateX(-50%) translate3d(0, 2px, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translateX(-50%) translate3d(0, -4px, 0);
+    }
+  
+    40%, 60% {
+      transform: translateX(-50%) translate3d(0, 4px, 0);
+    }
+}
+
+.home-poster .meteo a {
+    color: #fff;
+}
+
+.home-poster .meteo a:hover, .home-poster .meteo a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.home-poster .meteo .day, .home-poster .meteo .temperature {
+    float: left;
+    width: 50%;
+    height: 56px;
+    line-height: 56px;
+}
+
+.home-poster .meteo .day {
+    border-right: 1px solid rgba(255,255,255,.2);
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    position: relative;
+}
+
+.home-poster .meteo .day .weekday {
+    font-size: 14px;
+}
+
+.home-poster .meteo .day .day-month {
+    font-size: 20px;
+}
+
+.home-poster .meteo .day a {
+    position: absolute;
+    top: 50%;
+    line-height: 0;
+    font-size: 30px;
+}
+
+.home-poster .meteo .day a.disabled {
+    opacity: .3;
+    pointer-events: none;
+}
+
+.home-poster .meteo .day a.prev {
+    left: 10px;
+}
+
+.home-poster .meteo .day a.next {
+    right: 10px;
+}
+
+.home-poster .meteo .number {
+    font-size: 32px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.home-poster .meteo .degree {
+    font-size: 20px;
+}
+
+.home-poster .meteo .icon {
+    position: relative;
+    top: 7px;
+    left: 10px;
+}
+
+.home-poster .meteo .wind {
+    border-top: 1px solid rgba(255,255,255,.2);
+}
+
+.home-poster .meteo .wind img:first-child {
+    margin-left: 0;
+}
+
+.home-poster .meteo .wind img {
+    margin-top: -12px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.home-poster .meteo .wind .direction {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.home-poster .meteo .livecam {
+    height: 34px;
+    border-top: 1px solid rgba(255,255,255,.2);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 34px;
+}
+
+.home-poster .meteo .livecam a {
+    display: block;
+}
+
+.meteo .list .item:not(:first-child) {
+    display: none;
+}
+
+.eventi-home {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.eventi-home h3 {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1;
+}
+
+.eventi-home h3 a {
+    color: #5a5a5a;
+}
+
+.eventi-home .description {
+    color: #999;
+    line-height: 1.1;
+    font-size: 14px;
+}
+
+.eventi-home .date {
+    color: #666;
+    font-size: 12px;
+}
+
+.btn-news {
+    border-radius: 0;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.text-content {margin: 50px 0;}
+.fascia { text-align: center; margin: 50px 0;}
+.fascia-grigia {
+    padding: 50px 0;
+    background-color: #fafafa;
+    min-height: 560px;
+}
+
+.fascia-grigia--modified {
+    min-height: auto;
+}
+
+.no-text-align { text-align: inherit; }
+
+h2 {
+    font-weight: bold;
+    font-size: 38px;
+    color: #595959;
+    line-height: 1.2;
+}
+/* Cambiamente */
+h2.cursive {
+    font-family: 'JustAnotherHand';
+    font-size: 60px;
+    color: #9B9B9B;
+    letter-spacing: 0.35px;
+    font-weight: 400;
+    line-height: .8;
+}
+
+/* Cambiamente */
+.accent-text:first-letter {
+    font-family: "JustAnotherHand"; /*'alek';*/
+    font-size: 75px;
+    color: #595959;
+    display: inline;
+    line-height: 32px;
+}
+
+.menu-attivita {
+    background: #F9F9F9;
+    margin-top: 20px;
+    padding: 20px;
+    position: relative;
+}
+.menu-attivita a {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 16px;
+    color: #595959;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+    position: relative;
+    z-index: 10;
+    transition: color 0.6s ease 0s;
+}
+.menu-attivita a:hover {
+    color: #009ADE;
+}
+.menu-attivita a.active {
+    color: #fff;
+}
+.menu-attivita .selector {
+    background: #009ade none repeat scroll 0 0;
+    height: 40px;
+    left: -50px;
+    position: absolute;
+    top: 50%;
+    transition: all 0.6s ease 0s;
+    width: 50px;
+    z-index: 0;
+}
+
+.menu-attivita--modify a {
+    text-transform: none;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+}
+.menu-attivita--modify a:hover {
+    color: #fff;
+}
+.menu-attivita--modify a.active {
+    color: #595959;
+}
+.menu-attivita--modify a span {
+    position: relative;
+    right: 32px;
+    font-family: AmaticBold;
+    font-size: 28px;
+    padding: 0 16px 0 36px;
+    z-index: -1;
+}
+
+.contenuti-attivita {background: #f9f9f9;}
+.contenuti-attivita div[id^=attivita] { display: none;}
+.contenuti-attivita div[class^=box] {
+    float: left;
+    position: relative;
+    background: no-repeat center center / cover;
+    overflow: hidden;
+    
+    -webkit-transition: background-image 0.4s ease-in-out;
+    transition: background-image 0.4s ease-in-out;
+}
+.contenuti-attivita div[class^=box] .content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.contenuti-attivita .box1 {
+    width: 43%;
+}
+.contenuti-attivita .box1 > div {
+    height: 100%;
+    padding-bottom: 112.8%;
+}
+.contenuti-attivita .box-dx {
+    width: 57%;
+}
+.contenuti-attivita .box2 {
+    width: 67%;
+    -webkit-animation-delay: .15s; /* Safari 4.0 - 8.0 */
+    animation-delay: .15s;
+}
+.box2 .flipper {
+      -webkit-transition-delay: .15s; /* Safari */
+    transition-delay: .15s;
+}
+.contenuti-attivita .box2 > div {
+    height: 100%;
+    padding-bottom: 63.5%;
+}
+
+.contenuti-attivita .box3 {
+    width: 33%;
+    -webkit-animation-delay: .3s; /* Safari 4.0 - 8.0 */
+    animation-delay: .3s;
+}
+.box3 .flipper {
+     -webkit-transition-delay: .3s; /* Safari */
+    transition-delay: .3s;
+}
+
+.contenuti-attivita .box3 > div {
+    height: 100%;
+    padding-bottom: 129%;
+}
+
+.contenuti-attivita .info {
+    background-color: #009ADE !important;
+    color: #fff;
+    
+    font-size: 20px;
+    letter-spacing: 0.91px;
+    line-height: 1.5;
+    text-align: right;
+}
+.contenuti-attivita .info a { color: #fff; display: block; height: 100%; padding: 40px;}
+.contenuti-attivita .info a:hover {background-color: #F4B300; text-decoration: none}
+/* Cambiamente inizia */
+.contenuti-attivita button {
+    display: inline-block;
+    padding: 5px 40px 5px 20px;
+    text-transform: uppercase;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    background-color: transparent;
+    background-image: url(/images/white_brush.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.contenuti-attivita h3, .percorsi-home h3 {
+    font-family: "JustAnotherHand"; /*'alek';*/
+    font-size: 78px;
+    color: #FFFFFF;
+    margin-top: 0;
+    line-height: .8;
+    font-weight: 400;
+}
+/* Cambiamente finisce */
+.contenuti-attivita--modify .info a:hover {
+    background-color: #009ADE;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+    perspective: 1000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+/* flip the pane when hovered */
+.flip-container .flipper {
+    transform: rotateY(360deg);
+}
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+    width: 100%;
+    height: 100%;
+    background: no-repeat center center / cover;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s ease-out;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    visibility: visible;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-perspective: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+}
+
+
+.home-video, .home-video--modify  { height: auto !important;}
+.home-video .overlay-message {
+    font-size: 52px;
+    color: #FFFFFF;
+    max-width: 905px;
+}
+.home-video .overlay-message a.servizi { color: #fff; padding: 12px;}
+.home-video .overlay-message a.servizi:hover {text-decoration: none; background: #009ADE;}
+
+.home-video .see-all {
+    display: inline-block;
+    background: rgba(255,255,255,0.40);
+    border: 3px solid rgba(255,255,255,0.25);
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: 1.3px;
+    padding: 20px;
+    margin-top: 50px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.home-video .see-all:hover {
+    text-decoration: none;
+    background: #fff;
+    color: #009ADE;
+}
+.home-video { position: relative; margin: 50px 0;}
+.home-video--modify {
+    margin: 0;
+}
+.home-video:after {
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 0;
+    bottom: 40px;
+    width: 100%;
+    z-index: 0;
+    background: rgba(0,0,0,0.15);
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.15) 0%, transparent 100%);
+}
+.home-video .play, .home-video .pause {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: url(../img/play.svg) no-repeat center center / contain;
+    opacity: .7;
+    margin-top: 50px;
+}
+
+.home-video .mute,
+.home-video--modify .mute {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background: transparent url(../img/mute.png) bottom center no-repeat;
+    background-size: 100% auto;
+    opacity: .7;
+}
+
+.home-video .mute.active,
+.home-video--modify .mute.active {
+    background-position-y: top;
+}
+
+.home-video .play:hover, .home-video .pause:hover { opacity: 1;}
+
+.home-video .pause {
+    background-image: url(../img/pause.svg);
+}
+
+@media (max-width: 767px) {
+    .home-video--modify .meteo {
+        bottom: -85px;
+    }
+    .home-video--modify+.text-content {
+        margin: 120px 0 30px;
+    }
+}
+
+/* 
+.ospitalita, .ombrelloni {
+    padding: 0 30px;
+}
+*/
+
+.ospitalita h3, .ombrelloni h3 {
+    font-size: 42px;
+    color: #5A5A5A;
+    letter-spacing: 0;
+    line-height: 40px;
+    font-weight: bold;
+    height: 100px;
+    padding: 29px 15px;
+    margin-bottom: 0;
+    margin-top: 50px;
+}
+.ospitalita h3,
+.ombrelloni h3 {
+    font-size: 36px;
+}
+
+.ospitalita h3 {
+    background: transparent url(../img/hotels.png) right bottom no-repeat;
+}
+
+.ombrelloni h3, .pacchetti-offerte.ombrelloni h2 {
+    background: transparent url(../img/beach-place.png) right 50px bottom no-repeat;
+}
+
+.ospitalita .wrapper-text,
+.ombrelloni .wrapper-text {
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.20);
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 0.56px;
+    text-align: center;
+    line-height: 21px;
+    font-weight: 600;
+    padding: 30px;
+}
+
+.ospitalita .wrapper-text {
+    background: #009ADE;
+}
+
+/*
+#cycle-1 .cycle-slide {
+    width: 100%;
+}
+
+#cycle-2 {
+    margin-top: 5px;
+}
+
+#cycle-2 .cycle-slide {
+    padding: 5px;
+}
+
+#cycle-2 .cycle-slide.cycle-slide-active {
+    background-color: #f4b300;
+}
+*/
+
+.ombrelloni .wrapper-text {
+    background: #F4B300;
+}
+
+.ospitalita a, .ombrelloni a {
+    background: rgba(255,255,255,0.30);
+    border: 1px solid #FFFFFF;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #FFF;
+    font-weight: bolder;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.ospitalita a:hover, 
+.ospitalita a:focus, 
+.ombrelloni a:hover,
+.ombrelloni a:focus {
+    text-decoration: none;
+    background: #FFF;
+}
+
+/* Cambiamente */
+.ombrelloni a:hover,
+.ombrelloni a:focus, 
+.turistici a:hover, 
+.turistici a:focus {
+    color: #009ADE;
+}
+
+.ospitalita a:hover,
+.ospitalita a:focus {
+    color: #009ADE;
+}
+
+
+/* Pacchetti Offerte */
+
+.pacchetti-offerte > h2{
+    margin-top: 124px;
+    margin-bottom: 80px;
+}
+.pacchetti-offerte.ombrelloni > h2{
+    margin-top: 20px;
+    padding-top: 55px;
+}
+.pacchetti-offerte .offerta {
+    margin-bottom: 80px;
+    text-align: left;
+    position: relative;
+}
+.pacchetti-offerte .offerta .offerta__data {
+    display: inline-block;
+    color: #009ADE;
+    font-size: 16px;
+    font-weight: 600; 
+    margin-bottom: 12px;
+} 
+
+/* Cambiamente inizia*/
+.pacchetti-offerte .offerta .offerta__container, .offerta__container2 {
+    position: relative;   
+}
+
+.turistici .cards,
+.ombrelloni .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.turistici .cards {
+    grid-gap: 40px;
+}
+    
+.ombrelloni .card,
+.turistici .card {
+    text-align: left;
+    position: relative;
+}
+
+.pacchetti-offerte .offerta .offerta__link {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bolder;
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 0;
+    width: 50%;
+    letter-spacing: 1.5px;
+    background-image: url(/images/yellow_brush.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-decoration: none;
+}
+
+.pacchetti-offerte .offerta .offerta__link2 {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bolder;
+    background-color: #f4b30000;
+    border-color: #f4b30000;
+    border-radius: 0;
+    width: 100%;
+    letter-spacing: 1.5px;
+    background-color: #F4B300;
+    margin-top: 12px;
+}
+.pacchetti-offerte .offerta .offerta__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 12px;
+    margin-bottom: 0;
+    width: 75%;
+}
+
+.pacchetti-offerte .offerta .offerta__title2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 12px;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.pacchetti-offerte .offerta .offerta__number {
+    font-size: 13px;
+    color: #5A5A5A;
+}
+.btn-news {
+    padding: 10px 15px;
+}
+.tutte-le-offerte{
+    margin-top: -30px;
+}
+
+.pacchetti-offerte .offerta .offerta__image2 {
+    height: 200px;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .img_container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+ 
+  :root {
+ 
+     --brush1200: "M143.726 1.98665C142.64 3.55411 142.379 4.87085 143.146 4.91296C143.911 4.95506 142.588 6.25841 140.204 7.80864C137.272 9.71676 136.187 11.6191 136.853 13.6938C137.631 16.1244 137.122 16.4899 134.399 15.4545C132.354 14.6775 130.963 14.9703 130.963 16.1799C130.963 17.4143 128.85 17.8105 125.581 17.1885C114.273 15.0335 74.0309 24.911 53.5032 34.8784C36.4972 43.1348 20.3759 52.9721 16.7729 57.2898C11.9368 63.085 11.5519 71.5002 15.8322 77.8294C18.5776 81.8906 19.3857 82.1222 23.8097 80.1241C26.5184 78.9031 29.1089 78.6275 29.5657 79.5136C30.6837 81.682 27.5677 83.8389 25.5139 82.3193C24.6147 81.6514 24.0749 81.9748 24.316 83.0351C24.5572 84.0954 19.5454 91.0427 13.1762 98.4743C3.44816 109.825 1.60031 112.981 1.62107 118.22C1.6562 127.016 3.63343 129.95 8.73939 128.78C11.52 128.143 13.3247 128.723 13.8725 130.432C14.3357 131.881 15.7172 133.066 16.9406 133.066C18.1639 133.066 19.1653 134.357 19.1653 135.936C19.1653 138.526 21.0611 139.657 24.3559 139.033C25.0156 138.909 25.5538 139.573 25.5538 140.509C25.5538 141.444 26.8123 142.089 28.3487 141.944C31.297 141.663 31.3896 142.281 29.6871 150.93C28.9892 154.48 29.1936 155.929 30.2812 155.123C33.049 153.073 32.1419 159.039 28.946 163.907C26.0617 168.302 25.977 169.525 27.087 190.736C27.333 195.416 47.6115 190.807 48.1561 185.948C48.2903 184.757 48.4723 182.562 48.5634 181.069C48.8876 175.641 52.7047 176.665 52.7286 182.189C52.759 188.864 54.9422 193.329 57.3171 191.571C58.2946 190.847 59.0931 191.186 59.0931 192.323C59.0931 193.461 60.8691 195.36 63.038 196.545C66.0693 198.2 67.561 198.126 69.4775 196.221C71.5602 194.149 72.33 194.332 74.1651 197.339C76.1662 200.619 76.976 200.717 83.2989 198.453C87.1144 197.086 91.9313 196.022 94.0028 196.091C96.1509 196.162 99.0449 194.269 100.741 191.685C102.753 188.621 106.824 186.33 113.345 184.596C118.643 183.19 122.978 181.253 122.978 180.294C122.978 179.335 124.52 179.035 126.408 179.626C128.325 180.227 132.528 179.056 135.938 176.973C141.614 173.502 148.261 171.448 163.439 168.48C167.839 167.618 169.316 166.516 168.69 164.564C168.125 162.799 168.78 161.984 170.554 162.239C175.364 162.931 190.056 159.563 190.056 157.766C190.056 156.813 191.546 156.032 193.367 156.032C195.632 156.032 196.513 154.997 196.152 152.759C195.429 148.252 186.943 146.371 172.488 147.513C162.891 148.271 161.303 148.04 164.502 146.352C166.698 145.192 171.37 143.971 174.884 143.64C183.104 142.863 196.997 135.688 195.585 132.947C194.999 131.812 192.977 130.137 191.091 129.224C188.766 128.101 188.478 127.527 190.198 127.445C191.596 127.379 193.532 125.238 194.501 122.687C195.47 120.135 197.563 117.667 199.149 117.198C200.736 116.729 200.038 116.518 197.599 116.727C194.999 116.949 193.417 116.25 193.773 115.039C194.107 113.9 195.563 113.223 197.01 113.533C198.455 113.841 199.639 113.196 199.639 112.097C199.639 109.527 194.685 109.54 189.01 112.126C185.321 113.806 184.203 113.565 182.462 110.713C181.237 108.704 181.013 107.012 181.925 106.648C182.785 106.306 183.128 104.901 182.689 103.529C182.243 102.134 183.288 100.595 185.059 100.04C187.903 99.148 188.151 98.0111 186.985 91.2054C186.916 90.8131 185.784 91.5633 184.468 92.8724C182.555 94.7748 181.031 94.748 176.882 92.7365C174.026 91.3528 171.178 89.3145 170.554 88.2083C169.832 86.926 168.633 87.4849 167.254 89.7432C164.847 93.6877 158.628 93.2169 159.385 89.1461C159.738 87.2494 158.317 86.8552 153.795 87.5959C148.154 88.5203 148.038 88.4456 152.125 86.5337C154.541 85.4045 156.517 83.7853 156.517 82.9356C156.517 80.4112 164.175 81.1825 164.935 83.7834C165.437 85.504 166.595 85.1519 169.061 82.5299C172.451 78.9241 172.488 78.9299 172.488 83.148C172.488 86.1987 173.285 87.2169 175.283 86.7212C176.821 86.3404 177.979 84.5547 177.856 82.7538C177.735 80.9509 178.632 79.4772 179.852 79.4772C181.072 79.4772 182.071 78.6926 182.071 77.7318C182.071 75.749 185.096 75.9902 188.06 78.2083C189.159 79.0313 190.106 79.437 190.166 79.1117C191.926 69.6553 191.375 68.3979 184.455 66.0763C178.327 64.0208 177.659 63.2687 178.769 59.6725C179.571 57.0735 182.162 54.9931 185.923 53.9271C193.349 51.8218 193.051 47.2726 185.265 43.908C180.523 41.8583 179.862 40.1339 184.155 41.0085C184.862 41.152 186.888 40.0554 188.657 38.5702C191.802 35.9291 191.772 35.8104 187.304 33.1387C184.046 31.1904 181.467 30.9148 178.311 32.176C173.101 34.2564 173.17 34.3157 171.776 26.5167C170.821 21.1693 171.132 20.3694 174.385 19.8182C176.415 19.4717 178.078 17.8985 178.078 16.3196C178.078 12.7885 170.667 11.4756 166.355 14.2411C163.83 15.8622 163.105 15.5292 162.433 12.4459C161.415 7.78376 154.116 7.2517 152.682 11.734C152.12 13.4852 150.676 14.333 149.317 13.7072C148.006 13.1043 146.934 13.51 146.934 14.6067C146.934 15.7033 145.677 16.31 144.139 15.956C140.18 15.0411 140.672 9.97514 144.938 7.73208C148.598 5.80865 149.673 2.08043 147.115 0.185704C146.337 -0.39037 144.812 0.419196 143.726 1.98665ZM165.601 4.15889C163.407 6.78855 164.544 10.8498 167.297 10.2144C168.835 9.85839 170.092 8.35983 170.092 6.88424C170.092 3.86224 167.275 2.15316 165.601 4.15889ZM164.502 21.1043C163.408 22.6832 161.795 23.9751 160.917 23.9751C160.026 23.9751 160.2 22.7062 161.308 21.1043C162.402 19.5253 164.015 18.2335 164.894 18.2335C165.785 18.2335 165.611 19.5024 164.502 21.1043ZM185.142 19.6689C185.075 20.4574 184.771 22.6851 184.465 24.6181C183.938 27.9521 184.065 27.9636 186.945 24.8421C188.616 23.0315 189.596 20.8038 189.125 19.8909C188.076 17.8564 185.31 17.7014 185.142 19.6689ZM178.444 42.3559C177.913 42.9913 176.535 43.0602 175.384 42.5071C174.109 41.8965 174.488 41.4429 176.348 41.3511C178.032 41.2688 178.974 41.7205 178.444 42.3559ZM176.795 52.1089C174.603 52.7884 174.336 53.6094 175.674 55.5443C176.966 57.4084 176.923 58.463 175.513 59.506C174.291 60.4113 174.008 60.1204 174.738 58.706C175.379 57.4639 174.788 55.9788 173.397 55.3395C169.963 53.7606 171.905 50.7195 176.176 50.9912C179.004 51.1711 179.122 51.3855 176.795 52.1089ZM169.294 60.3386C169.294 61.3912 167.676 62.239 165.7 62.2237C162.795 62.1988 162.565 61.839 164.502 60.3386C167.599 57.9405 169.294 57.9405 169.294 60.3386ZM38.7922 68.0419C35.0933 72.2256 30.8482 75.6495 29.3613 75.6495C26.9257 75.6495 26.9592 75.2476 29.6967 71.6227C32.3575 68.0993 42.4959 60.574 44.7191 60.4706C45.1583 60.4515 42.4911 63.8582 38.7922 68.0419ZM8.67551 151.106C7.11673 152.47 4.52781 153.176 2.92112 152.673C1.31442 152.17 0 152.719 0 153.894C0 155.071 1.38629 156.032 3.08083 156.032C4.77377 156.032 7.23811 157.324 8.55573 158.903C9.87334 160.482 11.7308 161.774 12.6843 161.774C13.6377 161.774 15.6661 162.702 17.1913 163.835C20.3712 166.198 28.748 163.27 28.748 159.795C28.748 158.654 28.1044 158.197 27.3186 158.778C25.9339 159.804 23.2092 154.566 23.6836 151.795C23.8129 151.042 22.9728 150.863 21.8165 151.395C20.6618 151.925 17.8701 151.519 15.6134 150.491C12.6603 149.146 10.715 149.318 8.67551 151.106ZM11.1271 172.464C12.4159 174.48 13.601 176.399 13.7623 176.734C13.922 177.067 14.505 176.464 15.0576 175.395C15.6086 174.325 14.4235 172.403 12.4223 171.125C8.99174 168.935 8.91827 169.012 11.1271 172.464Z";
+     --brush_1200_992: "M221.579 4.81863C177.479 19.911 176.008 20.2288 172.25 15.5035C164.221 5.40498 101.666 18.3244 55.4876 39.6203C36.0174 48.5979 32.5938 51.1034 31.8678 56.9103C30.6489 66.6516 37.9221 68.3613 46.9419 60.4555C54.9303 53.4537 100.295 32.6112 102.711 34.8309C103.552 35.607 97.7926 39.2384 89.9086 42.9043C72.3083 51.0911 47.6545 66.2426 30.7078 79.2852C21.0076 86.7501 17.9831 90.7437 17.9831 96.0849C17.9831 103.944 21.187 104.735 32.0017 99.5464C40.3947 95.5183 42.1386 96.8289 40.2822 105.767C39.2401 110.773 34.903 113.914 19.7672 120.633C2.7027 128.206 0.5194 129.963 0.120245 136.447C-0.570909 147.652 1.7249 152.744 6.81479 151.291C9.27401 150.586 13.0941 151.079 15.3042 152.384C18.6555 154.365 17.9938 155.742 11.31 160.699L3.29741 166.642L18.6769 168.408C32.5214 170 34.0564 170.758 34.0564 176.004C34.0564 183.018 46.4945 187.336 50.3146 181.65C52.222 178.815 54.1695 179.017 61.9115 182.85C67.5506 185.644 74.4514 187.024 79.4261 186.351C89.4827 184.993 89.622 185.942 80.4441 193.195C73.3504 198.8 73.1897 198.812 68.7427 194.097C66.2647 191.468 62.6697 189.317 60.7542 189.317C58.8388 189.317 58.0673 190.046 59.0371 190.938C60.0068 191.83 59.5354 193.959 57.9896 195.671C55.8385 198.056 56.4868 198.47 60.7623 197.442C64.427 196.56 68.0328 197.893 71.2742 201.332C73.988 204.208 77.875 206.597 79.911 206.642C82.4399 206.696 81.9845 207.854 78.4778 210.295C74.0764 213.358 73.7924 214.786 76.5034 220.256C78.242 223.769 78.9627 227.686 78.1054 228.962C76.6829 231.079 102.365 229.844 111.075 227.376C116.218 225.917 115.066 228.686 108.396 233.801C105.082 236.346 103.876 238.462 105.717 238.509C107.56 238.553 109.065 239.766 109.065 241.199C109.065 242.633 107.557 242.976 105.717 241.958C103.099 240.512 103.11 240.951 105.762 243.964C107.629 246.085 108.452 249.512 107.589 251.579C106.727 253.646 107.378 256.109 109.036 257.051C113.065 259.342 125.139 256.417 125.139 253.151C125.139 251.724 127.011 248.834 129.302 246.728C133.066 243.266 132.894 242.412 127.515 237.802C123.831 234.646 122.757 232.34 124.691 231.746C129.824 230.175 128.233 226.272 122.46 226.272C119.513 226.272 117.102 225.163 117.102 223.808C117.102 221.121 127.625 220.485 134.126 222.781C136.524 223.626 137.526 225.816 136.57 228.112C135.493 230.689 136.004 231.406 138.078 230.226C139.803 229.246 141.212 226.849 141.212 224.895C141.212 222.594 144.038 221.345 149.249 221.345C154.606 221.345 157.285 222.577 157.285 225.04C157.285 227.073 155.477 228.736 153.267 228.736C151.057 228.736 149.249 229.968 149.249 231.473C149.249 233.269 152.479 233.653 158.625 232.594C166.053 231.313 168.001 231.766 168.001 234.784C168.001 239.61 171.816 239.657 176.994 234.895C179.204 232.862 183.812 231.234 187.233 231.278C192.974 231.35 193.091 231.608 188.762 234.629C184.439 237.647 182.253 243.518 185.451 243.518C186.209 243.518 190.126 240.162 194.158 236.063C198.189 231.963 204.12 228.159 207.34 227.612C210.56 227.065 215.382 225.54 218.056 224.225C220.73 222.907 224.124 221.443 225.597 220.973C227.07 220.5 228.005 219.366 227.676 218.455C227.344 217.543 230.572 217.721 234.847 218.849C240.626 220.372 242.994 220.007 244.071 217.425C245.729 213.454 255.81 212.88 261.762 216.417C263.972 217.731 264.642 218.822 263.249 218.844C261.856 218.864 265.322 222.761 270.951 227.504C276.582 232.246 282.998 236.127 285.208 236.127C287.418 236.127 296.32 232.813 304.989 228.76C313.658 224.71 325.863 220.739 332.11 219.938C348.352 217.854 357.506 214.203 358.917 209.243C359.791 206.169 367.519 203.055 385.923 198.359C415.088 190.919 415.386 190.874 413.119 194.244C412.209 195.6 412.779 196.708 414.384 196.708C415.991 196.708 418 195.045 418.847 193.013C419.696 190.98 422.972 189.3 426.131 189.28C429.289 189.261 436.694 187.684 442.587 185.779C453.021 182.407 452.435 180.805 440.099 178.992C435.051 178.248 435.046 178.125 439.948 173.619C444.848 169.113 444.848 168.93 439.914 165.612C437.138 163.744 430.878 162.217 426.002 162.217C419.76 162.217 417.138 161.081 417.138 158.376C417.138 156.265 418.233 155.159 419.576 155.92C420.915 156.681 423.98 156.61 426.388 155.762C429.889 154.525 430.42 152.123 429.051 143.727C427.942 136.925 428.419 132.623 430.406 131.493C432.691 130.194 432.654 128.847 430.264 126.198C427.735 123.395 427.923 122.01 431.143 119.642C440.366 112.862 438.261 90.7708 428.389 90.7708C420.443 90.7708 428.724 86.2672 443.854 82.3648C452.735 80.0736 460 77.0802 460 75.7154C460 74.3505 458.61 74.0253 456.909 74.9911C452.223 77.6543 441.248 78.3022 441.248 75.9174C441.248 74.7619 442.453 73.131 443.927 72.2933C448.486 69.7016 446.924 67.3241 438.81 64.5082C432.373 62.2736 429.688 62.6062 423.406 66.4151C413.486 72.4313 406.422 72.3993 406.422 66.3387C406.422 63.742 407.93 61.0541 409.771 60.3668C412.292 59.4281 412.126 58.4722 409.101 56.5037C405.774 54.3407 406.119 53.8849 411.11 53.8529C414.427 53.8331 417.138 52.86 417.138 51.6947C417.138 50.5269 413.995 50.1253 410.157 50.8004C401.056 52.3993 398.485 48.248 399.899 34.2446C401.721 16.2352 399.709 15.065 375.098 19.7928L354.192 23.811L341.494 16.2426C331.536 10.3101 329.436 7.96472 331.772 5.37788C334.049 2.85263 333.728 2.07904 330.401 2.07904C328.011 2.07904 326.055 3.30594 326.055 4.80631C326.055 6.30668 324.499 6.98419 322.594 6.31161C320.692 5.64149 316.845 6.62942 314.046 8.51166C311.247 10.3939 310.154 11.9337 311.614 11.9337C313.074 11.9337 315.715 10.6033 317.483 8.97729C319.838 6.81173 320.698 6.7797 320.698 8.86149C320.698 10.4235 316.452 13.5572 311.26 15.8213C300.236 20.6329 276.016 19.576 272.191 14.1189C270.562 11.7933 269.156 11.5469 267.79 13.3454C266.686 14.7989 263.369 16.7427 260.423 17.6617L255.065 19.337L260.423 15.4789C265.713 11.6701 265.687 11.5444 258.263 5.61932C249.174 -1.64109 240.979 -1.82093 221.579 4.81863ZM252.252 16.5851C250.851 17.7873 246.693 19.4971 243.01 20.3816L236.313 21.9928L243.01 18.2825C250.473 14.146 256.343 13.067 252.252 16.5851ZM427.127 151.387C426.238 152.205 423.926 152.293 421.995 151.581C419.857 150.795 420.492 150.212 423.613 150.093C426.436 149.987 428.017 150.569 427.127 151.387ZM133.175 235.863C133.175 237.073 134.984 238.701 137.194 239.482C139.642 240.344 141.212 239.485 141.212 237.282C141.212 235.292 139.404 233.663 137.194 233.663C134.984 233.663 133.175 234.653 133.175 235.863ZM158.542 236.25C155.997 240.039 159.482 242.483 162.922 239.32C164.845 237.551 164.891 236.174 163.061 235.134C161.561 234.281 159.528 234.784 158.542 236.25ZM97.8488 257.519C99.7803 258.231 102.092 258.142 102.982 257.324C103.871 256.506 102.29 255.925 99.4669 256.031C96.346 256.149 95.7111 256.733 97.8488 257.519Z";
+     --brush_756: "M229.057 4.04076C227.107 6.59855 226.575 8.18852 227.535 8.58376C229.911 9.56059 229.23 11.9456 226.575 11.9456C225.235 11.9456 224.139 12.6218 224.139 13.4484C224.139 14.2749 223.277 14.9512 222.225 14.9512C219.556 14.9512 215.742 19.7632 217.754 20.5912C220.32 21.6462 219.549 26.9737 216.83 26.9737C215.49 26.9737 214.393 26.2974 214.393 25.4709C214.393 22.9537 212.191 23.7847 209.531 27.3058C207.416 30.1071 206.633 30.3535 204.668 28.8402C203.184 27.6966 202.054 27.5763 201.586 28.5111C201.112 29.4563 200.067 29.4729 198.681 28.5577C197.489 27.7717 195.467 27.4411 194.187 27.8243C192.905 28.2075 186.102 29.1693 179.067 29.9613C160.271 32.0788 143.385 35.6134 132.778 39.6484C123.537 43.165 112.511 47.2136 105.979 49.4904C102.964 50.5408 94.8667 54.3565 87.9866 57.9722C81.1053 61.5865 74.7685 64.544 73.9036 64.544C73.0375 64.544 71.153 65.8966 69.7144 67.5497C68.277 69.2028 66.021 70.5553 64.7017 70.5553C61.5711 70.5553 42.5985 82.3359 40.0562 85.86C38.9721 87.3613 37.1912 88.5891 36.0973 88.5891C35.0034 88.5891 34.108 89.2203 34.108 89.9912C34.108 90.7621 33.0117 91.8216 31.6718 92.3461C30.115 92.9562 29.2355 94.6199 29.2355 96.9552C29.2355 98.966 28.6873 100.612 28.0173 100.612C27.34 100.612 26.7992 104.62 26.7992 109.628C26.7992 114.637 27.34 118.645 28.0173 118.645C28.6873 118.645 29.2355 119.69 29.2355 120.967C29.2355 125.032 34.9157 130.668 39.0123 130.668C41.1002 130.668 43.6242 131.673 44.6194 132.901C46.2201 134.877 45.3028 136.509 36.6588 147.059C31.2856 153.617 25.7723 159.421 24.408 159.955C23.0424 160.49 21.9266 161.588 21.9266 162.397C21.9266 163.205 20.6926 165.423 19.1858 167.325C10.0911 178.801 9.74516 179.661 9.74516 190.767C9.74516 196.787 10.2665 201.3 10.9633 201.3C11.6333 201.3 12.1814 202.301 12.1814 203.526C12.1814 206.623 17.9847 208.105 22.2811 206.103C26.2059 204.276 29.2355 206.392 29.2355 210.962C29.2355 212.583 30.3793 213.323 32.8899 213.323C35.7184 213.323 36.5443 213.994 36.5443 216.294C36.5443 219.839 41.5314 224.271 44.1334 223.038C45.1834 222.542 46.2858 223.166 46.6976 224.49C47.264 226.31 48.0923 226.499 50.5091 225.366C52.9503 224.221 53.5984 224.382 53.5984 226.134C53.5984 227.353 54.1465 228.351 54.8165 228.351C55.4865 228.351 56.0346 229.162 56.0346 230.154C56.0346 231.556 55.7094 231.556 54.5729 230.154C52.1731 227.194 50.888 228.112 52.7773 231.439C54.0698 233.716 54.2549 235.985 53.4839 240.08C52.9089 243.134 52.4338 246.648 52.4277 247.887C52.4192 249.891 52.5508 249.891 53.6166 247.887C54.6837 245.884 54.9493 245.884 56.0164 247.887C57.6365 250.934 57.5585 251.804 55.4256 254.435C54.4206 255.675 53.5984 257.504 53.5984 258.499C53.5984 259.495 52.5885 261.402 51.3533 262.74C50.1181 264.076 48.4736 266.647 47.6989 268.452C46.0337 272.332 45.8242 279.446 47.3761 279.446C49.1387 279.446 49.8075 285.701 48.8427 293.148C47.6331 302.479 48.805 305.552 54.4474 307.85C58.7292 309.593 59.6586 309.473 63.7479 306.638C66.2464 304.909 70.0555 303.47 72.2116 303.443C74.3689 303.418 76.9563 302.572 77.9613 301.565C80.9335 298.586 83.1493 292.055 82.3015 288.764C81.7204 286.501 82.1614 285.447 83.9898 284.73C88.0865 283.127 89.2839 285.24 88.564 292.799C87.7235 301.629 90.8188 307.367 95.6219 305.881C98.0716 305.122 98.6697 305.496 98.6697 307.788C98.6697 311.728 100.966 313.708 106.893 314.877C110.729 315.634 112.427 315.287 113.925 313.44C116.184 310.652 120.596 310.168 120.596 312.708C120.596 315.374 125.571 320.025 128.396 320C133.185 319.959 145.766 313.736 147.793 310.404C148.509 309.228 148.977 309.292 149.416 310.63C150.359 313.496 159.577 313.093 159.577 310.187C159.577 305.278 168.082 297.48 173.433 297.48C175.113 297.48 176.826 296.804 177.24 295.977C177.654 295.151 179.299 294.475 180.894 294.475C182.49 294.475 184.158 293.752 184.6 292.87C185.042 291.987 187.13 291.379 189.24 291.519C195.215 291.915 195.795 291.67 196.475 288.463C197.142 285.312 201.481 284.286 202.821 286.961C203.235 287.787 204.911 288.463 206.547 288.463C208.183 288.463 209.521 287.787 209.521 286.961C209.521 286.134 210.617 285.458 211.957 285.458C213.297 285.458 214.393 284.781 214.393 283.955C214.393 283.128 215.49 282.452 216.83 282.452C218.17 282.452 219.266 281.776 219.266 280.949C219.266 280.123 220.362 279.446 221.702 279.446C223.042 279.446 224.139 278.77 224.139 277.944C224.139 277.117 225.783 276.441 227.793 276.441C229.803 276.441 231.447 275.765 231.447 274.938C231.447 274.111 234.155 273.435 237.466 273.435C240.777 273.435 243.742 272.921 244.058 272.293C244.372 271.665 248.104 270.942 252.352 270.688C256.598 270.434 260.257 269.596 260.479 268.825C260.704 268.055 262.553 267.424 264.591 267.424C268.059 267.424 268.249 267.134 267.565 262.916C266.95 259.124 267.217 258.407 269.24 258.407C270.563 258.407 271.646 259.083 271.646 259.91C271.646 260.736 272.743 261.413 274.083 261.413C275.422 261.413 276.519 260.736 276.519 259.91C276.519 259.083 279.26 258.407 282.61 258.407C285.959 258.407 288.7 257.731 288.7 256.904C288.7 256.078 291.167 255.401 294.182 255.401C298.851 255.401 299.664 254.957 299.664 252.396C299.664 249.835 300.476 249.39 305.145 249.39C310.221 249.39 310.627 249.105 310.627 245.526C310.627 238.262 307.656 236.917 287.178 234.918C281.691 234.383 278.955 234.657 278.955 235.742C278.955 236.788 275.042 237.368 267.992 237.368C261.495 237.368 257.028 236.756 257.028 235.865C257.028 235.038 258.399 234.362 260.074 234.362C261.749 234.362 263.119 233.77 263.119 233.047C263.119 231.093 269.895 229.509 279.945 229.114C284.845 228.92 289.477 227.993 290.239 227.054C291 226.115 292.611 225.345 293.816 225.345C295.022 225.345 296.009 224.669 296.009 223.842C296.009 223.016 297.347 222.34 298.983 222.34C300.619 222.34 302.295 221.663 302.709 220.837C303.123 220.01 304.467 219.334 305.696 219.334C306.925 219.334 308.275 218.225 308.697 216.868C309.842 213.186 306.188 207.311 302.753 207.311C298.469 207.311 297.772 204.57 301.745 203.35C305.785 202.109 308.098 198.801 308.152 194.19C308.178 191.939 309.091 190.612 310.931 190.152C321.018 187.629 321.051 187.611 318.786 186.048C316.847 184.709 312.806 185.106 306.675 187.234C305.036 187.803 304.742 187.35 305.389 185.243C306.946 180.175 308.73 178.938 311.233 181.195C312.495 182.335 313.972 183.266 314.514 183.266C315.755 183.266 315.825 177.332 314.586 177.042C310.667 176.123 304.95 176.196 303.938 177.175C303.262 177.831 300.595 179.207 298.012 180.234C294.281 181.718 292.737 181.72 290.502 180.244C286.908 177.871 285.677 172.571 288.183 170.261C289.257 169.271 289.559 168.142 288.888 167.63C286.908 166.121 288.817 160.724 291.33 160.724C294.542 160.724 296.976 157.612 296.292 154.382C295.98 152.911 296.337 151.707 297.085 151.707C297.834 151.707 298.445 151.031 298.445 150.204C298.445 149.378 297.623 148.702 296.618 148.702C295.613 148.702 294.791 147.922 294.791 146.969C294.791 146.016 293.708 146.777 292.384 148.66C289.373 152.943 285.095 153.025 280.388 148.889C278.387 147.133 275.641 145.696 274.281 145.696C272.88 145.696 271.476 144.395 271.037 142.69C270.292 139.791 266.774 138.362 266.774 140.958C266.774 144.491 261.963 148.702 257.93 148.702C253.476 148.702 251.614 146.18 252.933 141.939C253.486 140.164 252.586 139.685 248.704 139.685C245.992 139.685 243.434 140.361 243.02 141.188C242.606 142.014 240.929 142.69 239.294 142.69C237.658 142.69 236.32 142.014 236.32 141.188C236.32 140.361 237.416 139.685 238.756 139.685C240.096 139.685 241.193 139.008 241.193 138.182C241.193 137.355 243.148 136.679 245.538 136.679C249.33 136.679 249.785 136.296 249.111 133.673C248.406 130.938 248.891 130.668 254.511 130.668C259.87 130.668 260.683 131.063 260.683 133.673C260.683 135.677 261.495 136.679 263.119 136.679C264.459 136.679 265.556 136.003 265.556 135.176C265.556 134.35 266.341 133.673 267.301 133.673C268.261 133.673 269.394 132.321 269.819 130.668C270.893 126.495 272.864 126.9 272.864 131.296C272.864 137.488 274.153 139.685 277.786 139.685C281.575 139.685 283.347 135.898 282 130.668C281.341 128.109 281.781 127.662 284.964 127.662C287.888 127.662 288.7 127.009 288.7 124.657C288.7 121.329 290.584 120.585 291.552 123.529C292.016 124.944 292.489 124.85 293.462 123.154C294.338 121.625 294.759 121.505 294.773 122.778C294.782 123.812 295.613 124.657 296.618 124.657C297.623 124.657 298.445 125.381 298.445 126.266C298.445 130.176 301.511 123.465 301.585 119.397C301.628 116.917 302.096 113.704 302.622 112.258C303.42 110.064 302.951 109.628 299.794 109.628C297.712 109.628 296.009 108.952 296.009 108.126C296.009 107.299 294.398 106.623 292.427 106.623C290.456 106.623 288.505 105.947 288.091 105.12C287.677 104.293 285.941 103.617 284.235 103.617C281.742 103.617 281.311 103.099 282.047 100.987C282.55 99.5401 282.991 97.0048 283.026 95.3517C283.111 91.4504 286.033 88.6973 290.151 88.6372C291.954 88.6101 293.768 87.9128 294.182 87.0863C294.596 86.2597 296.287 85.5834 297.939 85.5834C300.044 85.5834 301.298 84.4278 302.132 81.7212C303.703 76.6237 301.65 74.1425 293.989 71.8838C283.902 68.9097 284.159 69.0901 286.718 66.7652C288.086 65.5239 290.404 65.04 292.505 65.5585C294.432 66.0333 296.009 65.7703 296.009 64.9739C296.009 64.1759 297.436 62.7226 299.179 61.7428C301.792 60.2731 302.085 59.5712 300.856 57.7438C300.036 56.525 298.653 55.5272 297.78 55.5272C296.909 55.5272 294.6 53.8696 292.648 51.8453C289.611 48.6909 288.854 48.4624 287.379 50.2568C286.431 51.4079 282.837 52.8041 279.394 53.3586L273.132 54.3685L272.496 47.8087C272.148 44.202 271.476 39.3915 271.003 37.1177C270.16 33.0631 270.249 32.985 275.637 32.985C279.523 32.985 281.348 32.2892 281.87 30.6075C283.204 26.3185 282.653 24.4745 279.507 22.7072C274.988 20.1659 270.343 20.5597 264.625 23.9681C258.271 27.7552 258.247 27.7522 258.247 23.11C258.247 17.4083 255.522 14.9512 249.197 14.9512C244.947 14.9512 243.629 15.5102 243.629 17.3121C243.629 21.2976 240.202 24.3648 236.893 23.3399C234.682 22.6546 233.884 23.0138 233.884 24.6909C233.884 26.1411 232.741 26.9737 230.752 26.9737C227.508 26.9737 224.139 23.9305 224.139 21.0015C224.139 17.8862 230.095 11.9456 233.22 11.9456C235.738 11.9456 236.32 11.2197 236.32 8.08182C236.32 4.85678 233.839 -0.311393 232.448 0.0147176C232.233 0.0658133 230.707 1.87671 229.057 4.04076ZM263.424 7.97813C261.549 9.12327 260.683 10.9943 260.683 13.8947C260.683 17.8787 260.962 18.1101 265.251 17.6713C268.957 17.2941 269.895 16.5517 270.217 13.7414C270.596 10.4457 268.559 5.72541 266.93 6.11915C266.508 6.21984 264.932 7.0569 263.424 7.97813ZM294.222 32.0111C292.868 33.2329 291.794 36.3182 291.585 39.5883C291.269 44.5401 291.424 44.8677 293.099 42.8013C294.126 41.5345 295.455 40.499 296.053 40.499C296.652 40.499 297.762 39.0684 298.521 37.3176C299.595 34.8424 299.525 33.6732 298.204 32.0442C296.764 30.2679 296.161 30.2619 294.222 32.0111ZM260.101 35.3429C258.379 37.4663 256.127 38.9872 255.094 38.7242C252.374 38.0299 257.521 31.4821 260.785 31.4821C263.055 31.4821 263.006 31.7587 260.101 35.3429ZM281.02 69.2794C279.999 69.9842 278.199 70.103 277.017 69.5439C275.024 68.6001 275.038 68.4529 277.217 67.4956C280.475 66.0619 283.574 67.5151 281.02 69.2794ZM277.949 78.409C277.279 79.2356 276.077 79.4129 275.276 78.8027C274.171 77.9597 274.206 77.4021 275.416 76.4779C277.495 74.8939 279.536 76.4508 277.949 78.409ZM281.919 84.2429C281.55 84.9808 280.216 85.5834 278.955 85.5834C277.694 85.5834 276.324 86.2597 275.91 87.0863C274.817 89.2668 271.646 88.9302 271.646 86.6354C271.646 85.5609 272.194 84.0055 272.863 83.1804C274.343 81.3545 282.865 82.3554 281.919 84.2429ZM272.478 93.38C272.09 94.5778 271.801 94.2216 271.742 92.4708C271.69 90.8869 271.978 90.0002 272.382 90.4992C272.786 90.9981 272.83 92.295 272.478 93.38ZM278.955 95.3517C278.094 96.6321 277.139 97.3685 276.832 96.9898C276.161 96.1617 279.357 91.6533 280.043 92.4618C280.305 92.7714 279.816 94.0713 278.955 95.3517ZM267.992 97.3745C267.992 99.6047 267.155 100.086 263.719 99.8286C261.368 99.6528 259.587 98.9224 259.76 98.2056C259.933 97.4902 261.033 97.104 262.206 97.349C263.379 97.5939 264.337 97.0755 264.337 96.1978C264.337 95.3187 265.16 94.6003 266.165 94.6003C267.17 94.6003 267.992 95.8492 267.992 97.3745ZM74.8148 101.148C74.3921 102.507 73.5028 103.617 72.8377 103.617C71.3747 103.617 64.5617 112.407 64.5617 114.296C64.5617 115.036 63.7394 115.64 62.7344 115.64C61.7295 115.64 60.9072 116.316 60.9072 117.143C60.9072 117.969 59.8109 118.645 58.4709 118.645C57.131 118.645 56.0346 119.322 56.0346 120.148C56.0346 120.975 54.3902 121.651 52.3802 121.651C50.3703 121.651 48.7258 121.283 48.7258 120.832C48.7258 119.649 54.5509 112.634 55.5316 112.634C55.9859 112.634 57.2443 111.451 58.3284 110.004C60.6807 106.863 70.1773 100.612 72.5953 100.612C73.537 100.612 74.3068 99.8226 74.3068 98.8578C74.3068 97.8945 74.5943 97.4587 74.9451 97.8915C75.2947 98.3243 75.2363 99.7895 74.8148 101.148ZM51.9453 126.911C53.5691 128.914 53.5691 129.416 51.9453 131.419C49.6552 134.245 47.8219 134.275 45.5939 131.526C43.2332 128.615 43.4037 127.662 46.2895 127.662C47.6295 127.662 48.7258 126.986 48.7258 126.159C48.7258 124.036 49.8233 124.293 51.9453 126.911ZM9.74516 147.199C9.74516 148.025 10.2933 148.702 10.9633 148.702C11.6333 148.702 12.1814 148.025 12.1814 147.199C12.1814 146.372 11.6333 145.696 10.9633 145.696C10.2933 145.696 9.74516 146.372 9.74516 147.199ZM308.191 153.21C308.191 154.037 308.772 154.713 309.481 154.713C310.19 154.713 310.432 154.037 310.018 153.21C309.604 152.384 309.024 151.707 308.728 151.707C308.432 151.707 308.191 152.384 308.191 153.21ZM304.308 172.27C305.187 172.705 306.238 172.65 306.642 172.152C307.047 171.653 306.328 171.298 305.044 171.363C303.625 171.435 303.336 171.791 304.308 172.27ZM292.05 175.244C292.888 175.662 294.259 175.662 295.096 175.244C295.934 174.828 295.248 174.487 293.573 174.487C291.898 174.487 291.213 174.828 292.05 175.244ZM281.061 178.163C280.657 178.662 279.606 178.716 278.727 178.282C277.755 177.802 278.044 177.446 279.463 177.374C280.747 177.309 281.466 177.664 281.061 178.163ZM275.301 180.261C275.301 181.087 274.753 181.764 274.083 181.764C273.413 181.764 272.864 181.087 272.864 180.261C272.864 179.434 273.413 178.758 274.083 178.758C274.753 178.758 275.301 179.434 275.301 180.261ZM287.482 183.266C287.482 184.093 286.901 184.769 286.192 184.769C285.483 184.769 285.241 184.093 285.655 183.266C286.069 182.44 286.649 181.764 286.945 181.764C287.241 181.764 287.482 182.44 287.482 183.266ZM280.782 186.272C281.196 187.099 280.648 187.775 279.564 187.775C278.48 187.775 277.932 187.099 278.346 186.272C278.76 185.445 279.308 184.769 279.564 184.769C279.82 184.769 280.368 185.445 280.782 186.272ZM41.4169 207.311C41.4169 208.964 40.8687 210.317 40.1988 210.317C39.5288 210.317 38.9806 208.964 38.9806 207.311C38.9806 205.658 39.5288 204.306 40.1988 204.306C40.8687 204.306 41.4169 205.658 41.4169 207.311ZM22.5357 239.171C21.1957 240.113 19.1285 242.243 17.9408 243.902C16.2842 246.218 15.4485 246.508 14.3473 245.149C11.9183 242.153 7.30887 242.961 7.30887 246.385C7.30887 248.89 8.12137 249.39 12.1814 249.39C14.8614 249.39 17.054 250.066 17.054 250.893C17.054 251.72 18.1504 252.396 19.4903 252.396C21.1141 252.396 21.9266 253.398 21.9266 255.401C21.9266 257.877 22.7391 258.407 26.53 258.407C29.7361 258.407 31.6669 259.319 32.8899 261.413C34.6988 264.51 41.4169 265.693 41.4169 262.916C41.4169 262.089 43.0614 261.413 45.0713 261.413C47.0813 261.413 48.7258 260.736 48.7258 259.91C48.7258 259.083 49.548 258.407 50.553 258.407C52.664 258.407 52.8382 257.083 51.1438 253.899C50.0767 251.895 49.8111 251.895 48.7441 253.899C48.0022 255.295 47.5381 255.463 47.5259 254.342C47.5162 253.347 46.0568 250.743 44.2844 248.556C41.7373 245.414 41.4108 244.312 42.7264 243.31C43.6425 242.611 43.9872 241.541 43.4926 240.931C42.9993 240.321 41.9456 240.623 41.1526 241.601C39.4009 243.762 34.108 243.97 34.108 241.876C34.108 241.05 32.4636 240.373 30.4536 240.373C28.4437 240.373 26.7992 239.697 26.7992 238.87C26.7992 236.944 25.5835 237.03 22.5357 239.171ZM221.702 247.887C221.702 248.714 221.154 249.39 220.484 249.39C219.814 249.39 219.266 248.714 219.266 247.887C219.266 247.061 219.814 246.385 220.484 246.385C221.154 246.385 221.702 247.061 221.702 247.887ZM0 250.893C0 251.72 0.548165 252.396 1.21814 252.396C1.88812 252.396 2.43629 251.72 2.43629 250.893C2.43629 250.066 1.88812 249.39 1.21814 249.39C0.548165 249.39 0 250.066 0 250.893ZM21.9266 271.6C21.9266 272.245 23.0229 273.746 24.3629 274.938C25.7028 276.13 26.7992 278.307 26.7992 279.779C26.7992 283.043 27.6251 283.151 30.0187 280.198C31.6425 278.195 31.6425 277.693 30.0187 275.689C29.0138 274.45 27.3303 273.435 26.2766 273.435C25.2241 273.435 24.3629 272.759 24.3629 271.932C24.3629 271.106 23.8147 270.43 23.1447 270.43C22.4748 270.43 21.9266 270.957 21.9266 271.6ZM96.2334 283.955C96.2334 284.781 95.1371 285.458 93.7971 285.458C92.4572 285.458 91.3608 284.781 91.3608 283.955C91.3608 283.128 92.4572 282.452 93.7971 282.452C95.1371 282.452 96.2334 283.128 96.2334 283.955Z";
+    }
+  .pacchetti-offerte .offerta .frame { 
+   width: 200px; 
+   height: 200px;
+   position: relative;
+   clip-path: path(var(--brush1200));
+ } 
+
+ @media (min-width: 1200px) {
+    .pacchetti-offerte .offerta .offerta__image {
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+        max-width: 75%;
+    }
+    .pacchetti-offerte .offerta .offerta__link {
+        background-color: transparent;
+        border-color: transparent;
+        background-image: url(/images/yellow_brush.png);
+        background-size: 100%;
+        
+        background-repeat: no-repeat;
+        background-position: center center;
+        text-decoration: none;
+        width: 80%;
+    }
+    .pacchetti-offerte .offerta .offerta__title  {
+        width: 75%;
+    }
+    .pacchetti-offerte .offerta .offerta__title2 {
+        height: 44px;
+    }
+    .pacchetti-offerte .offerta .offerta__container2 {   
+        text-align: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    br {
+        display: none; 
+    }
+    .pacchetti-offerte .offerta .frame { 
+        width: 460px; 
+        height: 258px;
+        clip-path: path(var(--brush_1200_992));
+    }
+    .pacchetti-offerte .offerta .offerta__container2 {   
+        text-align: center;
+    }
+    .pacchetti-offerte .offerta .offerta__image2 {
+        height: 258px;
+    }
+    .pacchetti-offerte .offerta .offerta__link {
+        width: 40%;
+    }
+    .pacchetti-offerte .offerta .offerta__link2 {
+        width: 90%;
+    }
+    .turistici .cards,
+    .ombrelloni .cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+    .turistici .cards {
+        grid-gap: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .pacchetti-offerte .offerta .offerta__link {
+        width: 50%;
+    }
+    .pacchetti-offerte .offerta .frame { 
+        width: 320px; 
+        height: 320px;
+        clip-path: path(var(--brush_756));
+    }
+    .pacchetti-offerte .offerta .offerta__image2 {
+        height: 320px;
+    }
+    .pacchetti-offerte .offerta .offerta__link2 {
+        width: 100%;
+    }
+    .turistici .cards {
+        grid-gap: 30px;
+    }
+}
+
+@media (max-width: 756px) {
+    .pacchetti-offerte .offerta .frame { 
+        width: 200px; 
+        height: 200px;
+        clip-path: path(var(--brush1200));
+    } 
+    .pacchetti-offerte .offerta .offerta__image2 {
+        height: 200px;
+    }
+    .pacchetti-offerte .offerta .offerta__link2 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .pacchetti-offerte .offerta .frame { 
+        width: 320px; 
+        height: 320px;
+        clip-path: path(var(--brush_756));
+    }
+    .pacchetti-offerte .offerta .offerta__image2 {
+        height: 320px;
+    }
+    .pacchetti-offerte .offerta .offerta__link {
+        width: 30%;
+    }
+    .turistici .cards,
+    .ombrelloni .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 430px) {
+    .pacchetti-offerte .offerta .offerta__link {
+        width: 40%;
+    }
+}
+/* Cambiamente finisce*/
+
+@media (max-width: 767px) {
+    .home-video .play, .home-video .pause { width: 60px; height: 60px; margin-top: 30px;}
+    .home-video .overlay-message  { font-size: 26px;}
+    .home-video .overlay-message a.servizi { padding: 5px;}
+    .home-video .servizi img { height: 30px;}
+}
+
+
+.slider-spiagge { margin-top: 50px;}
+.slider-spiagge .item {
+    background: no-repeat center center / cover;
+    position: relative;
+    padding-bottom: 38%;
+    width: 100%;
+}
+.slider-spiagge .item:after {
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: linear-gradient(-53deg, rgba(0,0,0,0.20) 0%, rgba(128,172,190,0.85) 70%, #B4DBEB 100%);
+}
+.slider-spiagge .map {
+    width: 65%;
+    background: rgba(0, 0, 0, 0) none no-repeat scroll left top / contain ;
+    z-index: 100;
+    position: absolute;
+    height: 100%;
+    left: 0;
+}
+
+.slider-spiagge .info {
+    width: 40%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    font-size: 20px;
+    letter-spacing: 0.91px;
+    line-height: 1.5;
+    text-align: right;
+    color: #fff;
+    padding: 50px;
+    z-index: 100;
+    
+    font-size: 20px;
+    color: #FFFFFF;
+    letter-spacing: 0.91px;
+    font-weight: 600;
+}
+
+/* Cambiamente inizia*/
+.slider-spiagge .more, .percorsi-home .more, .box .more {
+    display: inline-block;
+    padding: 8px 25px 8px 20px;
+    text-transform: uppercase;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #fff;
+    background-image: url(/images/white_brush.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.slider-spiagge .more:hover, .percorsi-home .more:hover {
+    background-image: url(/images/yellow_brush.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-decoration: none;
+}
+
+.slider-spiagge h3 {
+    font-family: "JustAnotherHand"; /*'alek';*/
+    font-size: 78px;
+    color: #FFFFFF;
+    margin-top: 0;
+    font-weight: 400;
+}
+/* Cambiamente finisce*/
+
+.percorsi-home .pager,
+.slider-spiagge .pager {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 200;
+    width: 100%;
+}
+.percorsi-home .pager a,
+.slider-spiagge .pager a {
+    display: inline-block;
+    background: rgba(255,255,255,0.30);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+.percorsi-home .pager a:hover, .percorsi-home .cycle-pager-active,
+.slider-spiagge .pager a:hover, .slider-spiagge .cycle-pager-active {
+    background: #fff !important;
+}
+
+footer {
+    background: #222431;
+    color: #fff;
+    padding: 45px 0;
+}
+footer .nav-footer {
+    margin-top: 40px;
+}
+footer ul {
+    display: inline-block;
+    margin: 0 25px;
+    vertical-align: top;
+}
+footer ul:first-child { margin-left: 0;}
+footer ul:last { margin-right: 0;}
+footer a { 
+    letter-spacing: -0.3px;
+    font-weight: 600;
+    line-height: 1;
+    opacity: 0.7;
+    font-size: 16px;
+    color: #FFFFFF;    
+    display: inline-block;
+}
+footer a:hover { opacity: 1; color: #fff;}
+footer .social { white-space: nowrap; margin-top: 50px;}
+footer .social a {
+    display: inline-block;
+    font-size: 24px;
+    margin-left: 25px;
+}
+.home-newsletter {
+    background: url(../img/corde-colorate.jpg) no-repeat center center / cover;
+    padding: 60px 0;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 1.2;
+}
+.home-newsletter h2 {
+    font-weight: bold;
+    font-size: 22px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+footer p.credits {
+    margin-top: 35px;
+    font-size: 14px;
+}
+
+footer .footer-menu {
+    margin-top: 35px;
+}
+
+footer .footer-menu li {
+    display: inline-block;
+    margin: 0 25px !important;
+    vertical-align: top;
+}
+
+footer .privacy {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, .5);
+    padding-top: 35px;
+    border-top: 1px solid #919297;
+    margin-top: 35px;
+    margin-bottom: 0;
+}
+
+footer .privacy p strong {
+    color: #FFF;
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+    .contenuti-attivita .info a { padding:20px; font-size: 19px;}
+}
+@media (max-width: 991px) {
+    .contenuti-attivita .box1 { display: none; }
+    .contenuti-attivita .box-dx { width: 100%;}
+    .slider-spiagge h3 { font-size: 60px;}
+    .slider-spiagge .info {
+        width: 50%;
+    }
+    footer .social { text-align: center; margin-top: 30px;}
+    footer .social a  { margin: 0 12px;}
+}
+
+@media (max-width: 767px) {
+    .home-poster .meteo > img { display: none; }
+
+    .container { padding-left: 15px; padding-right: 15px;}
+
+    h2 { font-size: 30px;}
+    .text-content {margin: 30px 0;}
+    /* .fascia { margin: 30px 0;}
+    .fascia + .home-newsletter { margin-top: -30px; } */
+    .eventi-home { text-align: center; }
+    
+    .home-poster .welcome img { width: 60%;}
+    .poster-wrapper .overlay-message { bottom: 10px;}
+    
+    .contenuti-attivita .info a { padding:20px; }
+    .contenuti-attivita .box1, .contenuti-attivita .box3, .contenuti-attivita .box4 { display: none; }
+    .contenuti-attivita .box2, .contenuti-attivita .info { width: 100%; display: block;}
+    .contenuti-attivita .info { text-align: center; font-size: 14px;}
+    .contenuti-attivita h3 { margin-bottom: 5px; font-size: 65px; line-height: 1;}
+    
+    .home-video .see-all { font-size: 20px; padding: 15px; margin-top: 0;}
+    
+    .slider-spiagge .item { padding-bottom: 80%;}
+    .slider-spiagge .info {
+        width: 100%;
+        text-align: center;
+    }
+    footer .logo { text-align: center;}
+    footer ul { display: block; margin: 0;}
+    .poster-wrapper h1 {
+        text-align: center;
+        color: #fff;
+    }
+}
+
+
+.animated {
+    -webkit-transition: .7s ease-out;
+       -moz-transition: .7s ease-out;
+        -ms-transition: .7s ease-out;
+         -o-transition: .7s ease-out;
+            transition: .7s ease-out;
+     
+  }
+  
+  .flipped-horizontal-right {
+    -webkit-transform: rotateY(360deg);
+       -moz-transform: rotateY(360deg);
+        -ms-transform: rotateY(360deg);
+         -o-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  
+  .flipped-horizontal-left {
+    -webkit-animation: fliphorizontal .8s ease-out; /* Safari 4.0 - 8.0 */
+   animation: fliphorizontal .8s ease-out;
+  }
+  
+  .flipped-vertical-top {
+    -webkit-transform: rotateX(360deg);
+       -moz-transform: rotateX(360deg);
+        -ms-transform: rotateX(360deg);
+         -o-transform: rotateX(360deg);
+            transform: rotateX(360deg);
+  }
+  
+  .flipped-vertical-bottom {
+    -webkit-transform: rotateX(-360deg);
+       -moz-transform: rotateX(-360deg);
+        -ms-transform: rotateX(-360deg);
+         -o-transform: rotateX(-360deg);
+            transform: rotateX(-360deg);
+  }
+
+@-webkit-keyframes fliphorizontal {
+    from {
+        -webkit-transform: rotateY(0deg);
+       -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+         -o-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    }
+    to {
+        -webkit-transform: rotateY(-360deg);
+       -moz-transform: rotateY(-360deg);
+        -ms-transform: rotateY(-360deg);
+         -o-transform: rotateY(-360deg);
+            transform: rotateY(-360deg);
+    }
+}
+
+@keyframes fliphorizontal {
+    from {
+        -webkit-transform: rotateY(0deg);
+       -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+         -o-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    }
+    to {
+        -webkit-transform: rotateY(-360deg);
+       -moz-transform: rotateY(-360deg);
+        -ms-transform: rotateY(-360deg);
+         -o-transform: rotateY(-360deg);
+            transform: rotateY(-360deg);
+    }
+}
+
+
+
+/* Home di secondo livello */
+.separator {
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+    position: relative;
+}
+.separator:after {
+    position: absolute;
+    bottom: 0;
+    width: 190px;
+    height: 6px;
+    background: #595959;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+}
+
+.tab-contents .schede {
+    margin-top: 0;
+}
+
+.schede { margin: 40px -16px 0; text-align: center; background: #fafafa; padding: 50px 20px;}
+.schede > div { margin: 0 auto;}
+.scheda-wrapper {
+    display: inline-block; 
+    width: 250px;
+    background: #FFFFFF;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.10);
+    overflow: hidden;
+    margin: 20px 16px;
+}
+.scheda-wrapper .stars {
+    color: #f6b400;
+    position: absolute;
+    right: 13px;
+    top: 10px;
+    text-shadow: 0 0 5px #000;
+    font-size: 18px;
+    letter-spacing: 4px;
+}
+
+/* 17.12.20 - Stelline spostate sotto il contenuto e sopra il pulsante */
+.scheda-wrapper .stars.stars--custom {
+    position: relative;
+    right: inherit;
+    left: inherit;
+    top: unset;
+    text-shadow: 0 0 5px #00000025;
+    margin-bottom: 16px;
+    margin-top: -12px;
+}
+/* fine */
+
+/* Cambiamente */
+.tab-map .scheda-wrapper:hover, 
+.tab-map .scheda-wrapper.active, 
+.target-map:hover, 
+.target-map.active {
+    box-shadow: 0 0 10px 0 rgba(0, 84, 160, .5);
+    /*border: #F4B300 3px solid;*/
+}
+
+
+.tab-map .scheda-wrapper:hover .more, 
+.tab-map .scheda-wrapper.active .more,
+.target-map:hover .more, 
+.target-map.active .more {
+    background-color: #009ADE;
+    text-decoration: none;
+}
+.scheda { 
+    padding-bottom: 193%;
+    position: relative;
+        
+    font-size: 14px;
+    color: #595959;
+    line-height: 1.5;
+}
+
+/* 17.12.20
+- Stelline spostate sotto il contenuto e sopra il pulsante
+- Aggiunta "Hotel service" link icon
+*/
+.scheda {
+    padding-bottom: 225%;
+}
+
+.scheda .hotel-service {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.scheda .hotel-service a {
+    margin: 4px;
+    background-color: #f6b40025;
+    text-decoration: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scheda .hotel-service a i {
+    font-size: 20px;
+    color: #f6b400;
+}
+.scheda .hotel-service a:hover i {
+    color: #009ADE;
+}
+/* fine */
+
+.scheda > div {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    padding-bottom: 120px;
+}
+.scheda .content { padding: 0 20px;}
+.scheda .poster {
+    background: #eee no-repeat center center / cover;
+    padding-bottom: 88%;
+    position: relative;
+    width: 100%;
+}
+
+/* cambiamente */
+.scheda .cat {
+    background: #F4B300;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 12px;
+    position: absolute;
+    left: 0;
+    top: 15px;
+    font-weight: bold;
+    font-size: 12px;
+    z-index: 200;
+}
+.scheda .cat.cat-red {
+    color: red;
+    background-color: #FFF;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.scheda .cat.cat-green {
+    color: green;
+    background-color: #FFF;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.scheda .custom-details {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    left: 109px;
+    z-index: 200;
+    padding: 4px 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: left;
+    height: 42px;
+    max-height: 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.scheda .custom-details--negozi {
+    right: unset;
+    left: 0;
+    padding: 4px 15px;
+    height: 42px;
+    max-height: 42px;
+}
+
+.scheda .custom-details span {
+    display: block;
+}
+
+/* Cambiamente */
+.scheda .share {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    background-image: url(/svg/share.svg), url(/images/day_brush_yellow.png);
+    background-size: 50%, 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    bottom: -16px;
+    left: 50%;
+    margin-left: -16px;
+    z-index: 220;
+}
+
+.scheda .share-btns {
+    background: rgba(0, 0, 0, 0.4) none repeat scroll 0 0;
+    font-size: 22px;
+    height: 100%;
+    left: 0;
+    padding-top: 60%;
+    position: absolute;
+    text-align: center;
+    top: -100%;
+    transition: all 0.2s ease 0s;
+    white-space: nowrap;
+    width: 100%;
+    z-index: 210;
+}
+.scheda .share-btns.visible {
+    top: 0;
+}
+
+/* Cambiamente inizia*/
+.scheda .share-btns a {
+    background: transparent;
+    background-image: url(/images/day_brush_yellow.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    display: inline-block;
+    width: 34px;
+    height: 32px;
+}
+
+ .scheda .share-btns a:hover {
+    background: transparent;
+    background-image: url(/images/day_brush.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    display: inline-block;
+    width: 34px;
+    height: 32px;
+    text-decoration: none;
+}
+
+/* Cambiamente */
+.scheda .share:hover {
+    background-color: transparent;
+    background-image: url(/svg/share.svg), url(/images/day_brush.png);
+    background-size: 50%, 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+}
+
+
+.scheda-wrapper--immagine .scheda .share:hover {
+    background-image: url(/svg/share.svg), url(/images/blue_share_brush.png);
+    background-size: 50%, 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    text-decoration: none;
+}
+/* Cambiamente inizia*/
+
+.scheda h3 {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 30px 0 18px 0;
+}
+
+.scheda .more {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    line-height: 50px;
+    background: #F4B300;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+}
+.scheda .more:hover {
+    background-color: #009ADE;
+    text-decoration: none;
+}
+.scheda .stretched-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.scheda-wrapper--immagine .scheda{
+    padding-bottom: 0;
+}
+.scheda-wrapper--immagine .scheda > div {
+    position: relative;
+    padding-bottom: 0;
+    top: unset;
+    right: unset;
+    bottom: unset;
+    left: unset;
+}
+.scheda-wrapper--immagine .scheda .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #ffffff00, #b9b9b900, #77777700, #3b3b3b50, #000000);
+    z-index: 2;
+    opacity: 1;
+}
+.scheda-wrapper--immagine .scheda .poster {
+    padding-bottom: 140%;
+    z-index: 1 !important;
+}
+
+/* Cambiamente */
+.scheda-wrapper--immagine .scheda .share {
+    top: 15px;
+    bottom: inherit;
+    left: inherit;
+    right: 0;
+    border-radius: 0;
+    margin-left: 0;
+    z-index: 4;
+    background-image: url(/svg/share.svg), url(/images/yellow_share_brush.png);
+    background-size: 50%, 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+}
+.scheda-wrapper--immagine .scheda .cat {
+    z-index: 4;
+}
+.scheda-wrapper--immagine .scheda .share-btns {
+    z-index: 3;
+}
+.scheda-wrapper--immagine .scheda .content {
+    position: absolute;
+    bottom: -60px;
+    width: 100%;
+    color: #fff;
+    z-index: 2;
+    transition: all 0.3s;
+}
+.scheda-wrapper--immagine .scheda .stretched-link:hover~.content {
+    bottom: 0;
+}
+
+/* Cambiamente */
+.scheda-wrapper--immagine .scheda .stretched-link:hover~.overlay {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.495) 0%, rgba(0, 0, 0, 0.55) 100%);
+    border: #F4B300 3px solid;
+}
+.scheda-wrapper--immagine .scheda .more {
+    position: relative;
+    background: transparent;
+    line-height: unset;
+    text-transform: unset;
+}
+.scheda-wrapper--immagine .scheda .content h3 {
+    padding-bottom: 40px;
+    margin: 0;
+}
+.scheda-wrapper--immagine .scheda .content span {
+    display: inline-block;
+    padding-bottom: 24px;
+    text-transform: uppercase;
+}
+.scheda-wrapper--immagine .scheda .content span img {
+    margin-left: 4px;
+    height: 14px;
+}
+
+@media (max-width: 767px) {
+    .schede { margin: 0;}
+    .scheda-wrapper { width: 100%; margin: 20px 0;}
+    .scheda > div { position: static;}
+    .scheda { 
+        font-size: 18px;
+        padding-bottom: 0;
+    }
+    .scheda h3 {
+        font-size: 24px;
+    }
+    
+    .separator {
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+    }
+    .separator:after {
+        height: 3px;
+    }
+
+    .scheda-wrapper--immagine .scheda .poster {
+        padding-bottom: 75%;
+    }
+    .scheda-wrapper--immagine .scheda .more h3 {
+        font-size: 20px;
+    }
+}
+
+
+
+.boxes { margin-top: 40px; text-align: left; position: relative;}
+.boxes .cycle-prev, .boxes .cycle-next {
+    width: 70px;
+    height: 70px;
+    background: #DFDFDF url(../img/arrow-right.svg) no-repeat center center / 14px auto;
+    position: absolute;
+    right: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.boxes .cycle-prev:hover, .boxes .cycle-next:hover {
+    background-color: #f4b300;
+}
+.boxes .cycle-prev {
+    transform: translateY(-50%) rotate(180deg);
+    right: auto;
+    left: -70px;
+}
+.boxes .slide { width: 100%;}
+.box-wrapper {
+    display: inline-block; 
+    width: 50%;
+    padding: 16px;
+}
+.box-wrapper:nth-child(2n+1) { padding-left: 0;}
+.box-wrapper:nth-child(2n) { padding-right: 0;}
+.box { 
+    background: #eee no-repeat center center / cover;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.20);
+    padding-bottom: 62%;
+    position: relative;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 1.3;
+}
+.box > a {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.50) 100%);
+    color: #FFFFFF;
+    transition: all .4s;
+}
+.box .cat {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1.05px;
+    text-transform: uppercase;
+}
+.box .content {
+    position: relative;
+    top: 40%;
+    padding: 20px 25px;
+    transition: all .4s;
+}
+.box h3 {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 26px;
+    color: #FFFFFF;
+    background: #F4B300;
+    padding: 5px 8px;
+    margin-left: -5px;
+    margin-top: 5px;
+}
+.box > a:hover {
+    text-decoration: none;
+}
+.box > a:hover .content {
+    top: 20px;
+}
+.box .more {
+    visibility: hidden;
+}
+.box > a:hover .more { visibility: visible; }
+
+@media (max-width: 1199px) {
+    .box .content { top: 30%; }
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+    .boxes { margin-top: 0;}
+    .box-wrapper { width: 100%; margin: 10px 0; padding: 0;}
+
+    
+}
+
+
+.quote .author {
+    color: #595959;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0.89px;
+    padding-top: 100px;
+    text-align: right;
+    
+}
+blockquote:before {
+    background: rgba(0, 0, 0, 0) url("../img/apici.svg") no-repeat scroll center center / contain ;
+    content: "";
+    height: 56px;
+    left: -125px;
+    position: absolute;
+    top: 20px;
+    width: 84px;
+}
+blockquote {
+    border: medium none;
+    color: #595959;
+    font-family: "Playfair Display",serif;
+    font-size: 24px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 0;
+}
+
+/* cambiamente inizia*/
+.fascia-img .brush-stroke {
+    position: absolute;
+    top: -1%;
+    left: -1%;
+    width: 40%;
+    height: 15%;
+    transform: rotate(-5deg);
+    z-index: 1;
+  }
+
+  .fascia-img .brush-stroke2 {
+    position: absolute;
+    bottom: -1%;
+    right: -1%;
+    width: 40%;
+    height: 15%;
+    transform: rotate(-5deg);
+    z-index: 1;
+  }
+
+  .fascia-img .brush-stroke3 {
+    position: absolute;
+    top: -1%;
+    right: -1%;
+    width: 40%;
+    height: 15%;
+    transform: rotate(-5deg);
+    z-index: 1;
+    transform: scaleX(-1);
+  }
+  
+  
+  .fascia-img {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+.img-card {
+    height: 530px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 1200px) {
+    .img-card{
+        height: 438px;
+    }
+}
+@media (max-width: 992px) {
+    .img-card {
+        height: 331px;}
+}
+
+@media (max-width: 767px) {
+.img-card { 
+    display: inline-block; 
+    margin-bottom: 20px;
+}
+.fascia-img .col-sm-4 { 
+    margin-bottom: 20px;
+}
+.fascia-img .brush-stroke {
+    top: -1%;
+    left: -1%;
+    width: 20%;
+    height: 15%;
+  }
+  .fascia-img .brush-stroke3 {
+    top: -1%;
+    left: -1%;
+    width: 20%;
+    height: 15%;
+    transform: none;
+  }
+
+  .fascia-img .brush-stroke2 {
+    bottom: -1%;
+    right: -1%;
+    width: 20%;
+    height: 15%;
+  }
+}  
+@media (max-width: 576px) {
+    .fascia-img .brush-stroke, 
+    .fascia-img .brush-stroke2, 
+    .fascia-img .brush-stroke3 {
+    width: 25%;
+    height: 15%;
+  }
+}
+
+@media (max-width: 991px) {
+    .quote .author { font-size: 26px; }
+}
+
+@media (max-width: 767px) {
+    .quote .author, blockquote { text-align: center;}
+    .quote .author { padding-top: 0;}
+    blockquote { font-size: 26px;}
+    blockquote:before {
+        top: -60px;
+        left: 20px;
+        width: 50px;
+    }
+}
+/* Cambiamente finisce */
+
+.extra-links {
+    max-width: 380px;
+    border: .5px solid #979797;
+    padding: 40px;
+    
+    font-size: 16px;
+    color: #595959;
+    line-height: 1.3;
+    float: right;
+    margin-left: 40px;
+}
+
+/* Cambiamente */
+.extra-links h3 {
+    font-family: 'JustAnotherHand';
+    font-size: 52px;
+    color: #595959;
+    letter-spacing: 1.9px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.extra-links a { text-decoration: underline;}
+
+@media (max-width: 767px) {
+    .extra-links { float: none; display: block; margin: 20px auto; }
+}
+
+
+.meta-box {
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.10);
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-size: 16px;
+    color: #595959;
+    position: relative;
+}
+.meta-box h3 {
+    font-weight: bold;
+    font-size: 22px;
+    color: #595959;
+    margin-bottom: 60px;
+    text-align: center;
+    margin-top: 0;
+}
+.meta-box h3 span {
+    display: inline-block;
+    padding: 0 20px 20px 20px;
+    border-bottom: 4px solid #595959;
+}
+.meta-box table {
+    table-layout: fixed;
+}
+.meta-box th {
+    font-weight: 600;
+    font-size: 12px;
+    color: #009ADE;
+    text-transform: uppercase;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    vertical-align: top;
+    line-height: 29px;
+    width: 25%;
+}
+.meta-box td {
+    padding-bottom: 20px;
+    width: 75%;
+}
+.meta-box a {
+    word-break: break-all;
+}
+.meta-box .map, .meta-box .meta {
+    height: 500px;
+    position: relative;
+}
+.meta-box .item { height: 100%; overflow: hidden; }
+.meta-box .item > div.wrapper { height: 100%; padding-right: 5px;}
+
+.infoBox {
+    background: #0054a0 none repeat scroll 0 0;
+    color: #ffffff;
+    font-family: "raleway",sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 24px;
+    margin-top: -20px;
+    padding: 5px 20px;
+    transform: translate(-100%, -100%) !important;
+    white-space: nowrap;
+}
+.infoBox:after {
+    background: url(../img/marker-triangle.svg) no-repeat scroll 0 0;
+    bottom: -16px;
+    right: 0;
+    content: "";
+    height: 17px;
+    position: absolute;
+    right: 0;
+    width: 24px;
+    z-index: 100;
+}
+
+
+.meta-box .meta {
+    width: 68%;
+    margin: 0 auto;
+}
+.meta .item {
+    width: 100%;
+    padding-bottom: 60px;
+    padding-top: 40px; 
+}
+.meta-box .pager {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 200;
+    width: 100%;
+    background: rgba(255,255,255,.9);
+}
+.meta-box .pager a {
+    display: inline-block;
+    background: #0054A0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 4px;
+    opacity: .2;
+}
+.meta-box .pager a:hover, .meta-box .cycle-pager-active {
+    opacity: 1 !important;
+}
+
+.meta-box .cycle-prev, .meta-box .cycle-next {
+    width: 70px;
+    height: 70px;
+    background: #009ADE url(../img/arrow-right.svg) no-repeat center center / 14px auto;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: .1;
+    z-index: 200;
+}
+.meta-box .cycle-prev:hover, .meta-box .cycle-next:hover {
+    opacity: 1;
+}
+.meta-box .cycle-prev {
+    transform: translateY(-50%) rotate(180deg);
+    right: auto;
+    left: -10px;
+}
+
+.cms-editor .meta-placeholder {
+    width: 100%;
+    height: 500px;
+    background: url(../img/meta-placeholder.png) no-repeat center center / contain;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.meta-box .download {
+    font-weight: 600;
+    display: inline-block;
+    padding-left: 60px;
+    background: url(../img/download.svg) no-repeat center left / 18px auto;
+}
+.meta-box .filesize {
+    font-size: 14px;
+    color: #595959;
+    text-align: right;
+}
+
+@media (max-width: 991px) {
+    .meta-box .meta {
+        width: 100%;
+    }
+    .meta-box .meta .item {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .meta-box .map { height: 300px;}
+}
+
+/* TAB SERVIZI E ATTIVITA' */
+
+.tab-list.with-shadow {
+    box-shadow: 0 2px 2px rgba(0,0,0,.1);
+}
+
+.tab-list .tab {
+    display: inline-block;
+    padding: 15px 45px;
+    margin: 0 15px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.tab-list .tab a:hover,
+.tab-list .tab a:focus {
+    text-decoration: none;
+    color: #009ADE;
+}
+
+.tab-list .tab.active-tab {
+    padding: 15px 45px 10px;
+    border-bottom: 5px solid #009ADE;
+}
+
+.tab-contents { display: none; }
+
+.tab-contents .attivita-spiaggia h3 {
+    font-size: 20px;
+    color: #5A5A5A;
+    letter-spacing: 0;
+    line-height: 30px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    border-bottom: 1px solid #DFDFDF;
+    padding-left: 15px;
+}
+
+.tab-contents .point {
+    padding: 15px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.tab-contents .point h4 {
+    font-size: 16px;
+    color: #F4B300;
+    letter-spacing: 0;
+    line-height: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.tab-contents .point p {
+    letter-spacing: 0;
+    line-height: 30px;
+    font-size: 16px;
+    color: #5A5A5A;
+    margin-bottom: 15px;
+}
+
+.tab-contents .point dl {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #5A5A5A;
+    font-weight: bold;
+}
+
+.tab-contents .point dl dt,
+.tab-contents .point dl dd {
+    line-height: 30px;
+}
+
+.tab-contents .point.active,
+.tab-contents .point:hover, 
+.tab-contents .point:focus {
+    text-decoration: none;
+    background-color: #F4B300; 
+}
+
+
+.tab-contents .point.active h4,
+.tab-contents .point.active p,
+.tab-contents .point.active dl,
+.tab-contents .point:hover h4, 
+.tab-contents .point:focus h4,
+.tab-contents .point:hover p,
+.tab-contents .point:focus p,
+.tab-contents .point:hover dl,
+.tab-contents .point:focus dl {
+    color: #FFFFFF;
+}
+
+.active-tab { display: block; }
+
+.servizi-spiaggia {
+    vertical-align: top;
+    -webkit-column-count: 4; /* Chrome, Safari, Opera */
+    -moz-column-count: 4; /* Firefox */
+    column-count: 4;
+}
+.servizi-spiaggia a {
+    display: block;
+    vertical-align: top;
+    padding: 10px 0;
+    padding-left: 50px;
+    background: no-repeat 10px center / auto 29px;
+    
+    font-weight: 400;
+    font-size: 16px;
+    color: #595959;
+}
+.servizi-spiaggia a:hover, .servizi-spiaggia a.active {
+    background-color: #009ADE;
+    color: #fff;
+    text-decoration: none;
+}
+
+.full-map {
+    width: 100%;
+    height: 600px;
+}
+.nicescroll-rails {
+    border-radius: 5px;
+}
+@media (max-width: 991px) {
+    .full-map {
+        height: 500px;
+    }
+    .servizi-spiaggia {
+        -webkit-column-count: 3; /* Chrome, Safari, Opera */
+        -moz-column-count: 3; /* Firefox */
+        column-count: 3;
+    }
+}
+
+@media (max-width: 767px) {
+    .full-map {
+        height: 600px;
+    }
+    .tab-list .tab {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 0 10px 10px 10px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: bolder;
+        border: 3px solid #009ade;
+    }
+    .tab-list .tab.active-tab {
+        border-bottom: 3px solid #009ade;
+        padding: 10px 20px;
+        background-color: #009ade;
+    }
+    .tab-list .tab.active-tab a {
+        color: #FFF;
+    }
+}
+@media (max-width: 575px) {
+    .servizi-spiaggia {
+        -webkit-columns: unset;
+        -moz-columns: unset;
+        columns: unset;
+
+        height: 460px;
+        overflow-y: scroll;
+    }
+}
+
+
+.search-results main {
+    background-image: linear-gradient(7deg, rgba(0,84, 160, .15) 11%, rgba(0, 154, 222, .15) 53%, rgba(244, 179, 0, .15) 100%);
+}
+.search-results .results {
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+.search-results h1 {
+    font-weight: bold;
+    font-size: 42px;
+    color: #5A5A5A;
+    margin-bottom: 40px;
+}
+.search-results .results h2 {
+    font-weight: bold;
+    font-size: 22px;
+    color: #5A5A5A;
+}
+.results-box {
+    padding: 70px;
+    background: rgba(255,255,255,0.60);
+    margin-top: 60px;
+}
+.results-box h3 {
+    font-weight: 600;
+    font-size: 22px;
+    color: #22A9DE;
+    margin-top: 5px;
+}
+.results-box li {
+    margin-bottom: 50px;
+}
+.results-box .cat {
+    font-weight:bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #5A5A5A;
+}
+
+@media (max-width: 767px) {
+    .search-results h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .search-results .results h2 {
+        font-size: 18px;
+    }
+    .search-results .results {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    .results-box {
+        padding: 30px;
+        margin-top: 30px;
+    }
+    .results-box li {
+        margin-bottom: 30px;
+    }
+}
+
+
+.page-gallery {
+  /* Prevent vertical gaps */
+  line-height: 0;
+  margin-bottom: 50px;
+   
+  -webkit-column-count: 4;
+  -webkit-column-gap:   14px;
+  -moz-column-count:    4;
+  -moz-column-gap:      14px;
+  column-count:         4;
+  column-gap:           14px;  
+}
+
+.page-gallery a {
+    display: inline-block;
+    height: auto;
+    margin-bottom: 14px;
+    width: 100%;
+}
+
+
+@media (max-width: 1199px) {
+    .page-gallery {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+@media (max-width: 991px) {
+    .page-gallery {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+
+/* Cambiamente inizia */
+.percorso h1 {
+    font-family: "JustAnotherHand";
+    font-size: 150px;
+    color: #FFFFFF;
+    line-height: 1;
+    margin-bottom: 60px;
+}
+.percorso h2 {
+    font-family: "JustAnotherHand";
+    font-size: 90px;
+    color: #FFFFFF;
+    line-height: 1;
+}
+/* Cambiamente finisce */
+
+.percorso .slide {
+    background: #eee no-repeat center center / cover;
+    font-size: 16px;
+    color: #FFFFFF;
+    position: relative;
+}
+.percorso .slide > div {
+    background-image: linear-gradient(-180deg, rgba(0,0,0,0.45) 3%, rgba(0,0,0,0.55) 100%);
+}
+.percorso .content {
+    margin: 60px 0;
+    font-weight: 600;
+}
+
+.percorso .start {
+    font-weight: 600;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding: 10px 25px;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+}
+.percorso .start:hover {
+    text-decoration: none;
+    background: #fff;
+    color: #555;
+}
+
+.percorso .arrows-wrapper {
+    bottom: 50px;
+    height: 100px;
+    position: absolute;
+    width: 100%;
+    z-index: 50;
+    visibility: visible;
+    transition: all .2s;
+}
+.first-slide-active .arrows-wrapper { visibility: hidden; }
+.percorso .control-arrow {
+    cursor: pointer;
+    display: block;
+    border: none;
+    opacity: .35;
+    width: 85px !important;
+    height: 85px;
+    border-radius: 50%;
+    
+    background: rgba(255,255,255,.5) url(../img/arrow-thin.svg) no-repeat center center / auto 50%;
+}
+.percorso .arrow-prev {
+    transform: rotate(180deg);
+}
+.percorso .control-arrow:hover {opacity: 1;}
+
+.percorso .mappa-img {
+    position: absolute;
+    right: 0;
+    bottom: 20%;
+    max-width: 43%;
+}
+.percorso .mappa-img img { display: block;}
+.percorso .open-map {
+    font-size: 18px;
+    color: #FFFFFF;
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.percorso .mappa-wrapper {
+    height: 100%;
+    position: absolute;
+    right: -100%;
+    top: 0;
+    width: 43%;
+    z-index: 20000;
+    transition: right .3s;
+}
+.percorso #mappa-percorso {
+    width: 100%;
+    height: 100%;
+}
+
+.percorso .mappa-wrapper.open {
+    right: 0;
+}
+.percorso .close-map {
+    position: absolute;
+    right: 0;
+    top: 100px;
+    width: 85px;
+    height: 85px;
+    background: rgba(0, 0, 0, 0.2) url(../img/close.svg) no-repeat center center / 33px auto;
+}
+
+.content-slide-percorso {
+    display: block;
+    height: 60vh;
+}
+
+.info-window table td {
+    padding: 5px;
+}
+
+@media all and (max-width:767px) {
+    #tab-2 .fascia-grigia {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .percorso .close-map { top: 80px; }
+    .percorso h1 {
+        font-size: 100px;
+        margin-bottom: 40px;
+    }
+    .percorso h2 {
+        font-size: 80px;
+    }
+}
+@media (max-height: 800px) {
+    .percorso h2 {
+        font-size: 80px;
+    }
+    .percorso .control-arrow {
+        width: 45px !important;
+        height: 45px;
+    }
+    .percorso .arrows-wrapper {
+        bottom: 20px;
+        height: auto;
+    }
+    .percorso .content {
+        margin: 20px 0;
+        
+    }
+    
+   
+}
+
+@media (max-width: 767px) {
+    #percorso-margin-top {
+        margin-top: 35vh;
+    }
+    .content-descrizione-percorso {
+        margin-top: 20px;
+    }
+    .percorso h1 {
+        font-size: 70px;
+        margin-bottom: 40px;
+    }
+    .percorso h2 {
+        font-size: 40px;
+    }
+    .percorso .content {
+        /* margin: 40px 0; */
+        margin: 34vh;
+    }
+    
+    .percorso .control-arrow {
+        width: 45px !important;
+        height: 45px;
+    }
+    .percorso .arrows-wrapper {
+        bottom: 20px;
+        height: auto;
+    }
+    .percorso .content-wrapper { padding-top: 60px;}
+    .percorso .content {
+        margin: 20px 0;
+        
+    }
+    
+    .percorso .mappa-wrapper {
+        height: 40vh;
+        position: absolute;
+        left: -100%;
+        top: 0;
+        width: 43%;
+        z-index: 20000;
+        transition: left .3s;
+    }
+    
+    .percorso .mappa-wrapper.open {
+        left: 0;
+    }
+
+    /* .percorso .control-arrow { display: none;} */
+    
+    .percorso .mappa-wrapper {
+        width: 100%;
+    }
+    .nav-is-visible .percorso .mappa-wrapper {
+        z-index: 1;
+    }
+}
+
+
+.percorsi-home { margin-top: 50px; margin-bottom: 70px;}
+.percorsi-home .item { 
+    width: 100%; height: 450px; text-align: left;
+    
+    font-size: 22px;
+    color: #FFFFFF;
+    line-height: 1.4;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.percorsi-home .item > div {
+    background-image: linear-gradient(-195deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.32) 100%);
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.percorsi-home .info {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.page-sidebar {
+    margin-bottom: 70px;
+}
+
+.page-sidebar ul {
+    margin: 20px 0 10px;
+}
+
+.page-sidebar ul a {
+    color: #5A5A5A;
+}
+
+.page-sidebar ul a.active {
+    color: #009ADE;
+}
+
+.page-sidebar ul a:focus,
+.page-sidebar ul a:hover {
+    color: #F4B300;
+}
+
+.page-content {
+    margin-bottom: 70px; 
+}
+
+.page-content table {
+    width: 100%;
+}
+.page-content table td, .page-content table th {
+    padding: 10px;
+}
+
+.page-attachments {
+    margin: 50px 0;
+    border: 1px solid #ccc;
+}
+
+.page-attachments h3 {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding: 20px 30px;
+}
+
+.page-attachments table.docs {
+    margin: 15px 0px;
+    width: 100%;
+}
+
+.page-attachments table.docs td {
+    padding: 0px 30px;
+}
+
+.page-attachments .download {
+    font-weight: 600;
+    display: inline-block;
+    padding-left: 60px;
+    background: url(../img/download.svg) no-repeat center left / 18px auto;
+}
+
+.study {
+    border: 1px solid #ccc;
+}
+
+.study .study-title {
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding: 20px 30px;
+}
+
+.study .study-content {
+    padding: 20px 30px 10px 30px;
+}
+
+/*
+ * HOTEL
+ */
+
+.search-wrapper {
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 50px;
+}
+
+#single-hotel-search,
+#hotel-search {
+    margin: 30px -10px;
+}
+
+#single-hotel-search .form-group,
+#hotel-search .form-group {
+    float: left;
+}
+
+/* #single-hotel-search .form-group {
+    margin-right: 20px;
+} */
+
+#single-hotel-search label,
+#hotel-search label,
+#occupazione-subform label {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    color: #5a5a5a;
+    margin-bottom: 0;
+}
+
+#single-hotel-search input[type=text], 
+#hotel-search input[type=text], 
+#single-hotel-search input[type=date], 
+#hotel-search input[type=date], 
+#single-hotel-search select,
+#hotel-search select,
+#occupazione-subform select {
+    background: #eee;
+    border: none;
+    padding: 5px;
+    height: 30px;
+    color: #444;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: none;
+}
+
+/* SAFARI IS A COMPLETE SHIT */
+#id_check_in, #id_check_out{
+    background: #eee;
+    border: none;
+    padding: 5px;
+    height: 30px;
+    color: #444;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: none;
+    line-height: 1;
+}
+
+#single-hotel-search select,
+#hotel-search select {
+    min-width: 80px;
+}
+
+#single-hotel-search button[type=submit],
+#hotel-search button[type=submit] {
+    background: #009ade;
+    color: #fff;
+    border: none;
+    margin-top: 26.5px;
+    height: 30px;
+    padding: 0 5px;
+}
+
+#single-hotel-search .input-group-addon,
+#hotel-search .input-group-addon {
+    background-color: #ddd;
+    border-color: #ddd;
+}
+
+#single-hotel-search button[type=submit]:hover, 
+#hotel-search button[type=submit]:hover, 
+#single-hotel-search button[type=submit]:focus ,
+#hotel-search button[type=submit]:focus {
+    background: #F4B300;
+    color: #fff;
+}
+#single-hotel-search input[type=text]:focus, 
+#hotel-search input[type=text]:focus, 
+#single-hotel-search select:focus,
+#hotel-search select:focus {
+    background: #009ade;
+    color: #fff;
+}
+
+.hotel-view .breadcrumbs {
+    margin-bottom: 0;
+}
+
+/* .single-hotel-view .breadcrumbs li:last-child:before {
+    content: ":";
+    width: 7px;
+    display: inline-block;
+} */
+
+.static-maps {
+    margin-bottom: 50px;
+}
+
+.slider-images .image {
+    padding: 10px;
+}
+
+.room-disabled .thumb {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: .7;
+}
+
+.room-disabled span.unavailable {
+    display: inline-block;
+    background: #f4f8fa url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAI0lEQVQYV2NkQAaz7/1nhPNn3/vPkKrECBGAckBMRmQOSAAAcBELfcyoh2kAAAAASUVORK5CYII=) repeat;
+    color: #009ADE;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #009ADE;
+}
+
+.hotel-services {
+    column-count: 3;
+    column-gap: 30px;
+    column-fill: balance;
+    padding: 0;
+    margin-bottom: 70px;
+}
+
+.hotel-services li {
+    margin-left: 18px;
+}
+
+/* Eventi */
+
+#calendar {
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+
+#calendar h3 {
+    position: relative;
+    margin: 0;
+    padding: 10px 14.28571428%;
+    line-height: 25px;
+    text-transform: capitalize;
+}
+
+#calendar h3 a.prev,
+#calendar h3 a.next {
+    position: absolute;
+    width: 14.28571428%;
+    height: 100%;
+    display: block;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+#calendar h3 a:hover,
+#calendar h3 a:focus {
+    text-decoration: none;
+}
+
+#calendar h3 a:first-child {
+    top: 0;
+    left: 0;
+}
+
+#calendar h3 a:last-child {
+    top: 0;
+    right: 0;
+}
+
+#calendar table {
+    display: block;
+}
+
+#calendar table tbody,
+#calendar table thead,
+#calendar table tr {
+    width: 100%;
+}
+
+#calendar table thead {
+    border-bottom: 1px solid #DFDFDF;
+}
+
+#calendar table tbody,
+#calendar table thead,
+#calendar table tr,
+#calendar table th,
+#calendar table td {
+    display: block;
+    float: left;
+}
+
+#calendar table tbody:before,
+#calendar table tbody:after,
+#calendar table thead:before,
+#calendar table thead:after,
+#calendar table tr:before
+#calendar table tr:after {
+    content: "";
+    display: table;
+}
+
+#calendar table th,
+#calendar table td {
+    width: 14.28571428%;
+    position: relative;
+}
+
+#calendar table th:before,
+#calendar table td:before {
+    content: "";
+    padding-bottom: 100%;
+    display: block;
+}
+
+/* Cambiamente */
+#calendar table td a,
+#calendar table th span, 
+#calendar table td span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    text-transform: lowercase;
+    font-variant: small-caps;
+}
+
+#calendar td .sunday {
+    color: #CCCCCC;
+}
+
+#calendar td a,
+#calendar td a.sunday {
+    font-weight: bold;
+    color: #009ADE;
+}
+
+/* Cambiamente inizia*/
+#calendar td .today {
+    color: #FFFFFF;
+    font-weight: bold;
+    background-image: url(/images/day_brush.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#calendar td a.day:hover {
+    color: #FFFFFF;
+    font-weight: bold;
+    background-image: url(/images/day_brush_yellow.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-decoration: none;
+}
+
+#calendar td span.selected {
+    background-image: url(/images/day_brush_yellow.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-decoration: none;
+}
+/* Cambiamente finisce*/
+
+@media all and (max-width: 991px) {
+    #calendar {
+        padding: 20px;
+        box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        max-width: 300px;
+        margin: 0 auto 80px;
+    }
+}
+
+#tags {
+    margin-top: 25px;
+}
+
+#tags li {
+    display: inline-block;
+    margin: 10px 10px 10px 0;
+}
+
+#tags li a {
+    display: block;
+    padding: 5px 20px;
+    background-color: #C5C5C5;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 50px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+#tags li a.active,
+#tags li a:focus,
+#tags li a:hover {
+    background-color: #009ADE;
+    text-decoration: none;
+}
+
+.event {
+    margin-bottom: 20px;
+}
+
+.event .keywords {
+    font-size: 14px;
+    margin-bottom: 0;
+    color: #f4b300;
+    font-weight: 700;
+}
+
+.event h3 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.event .date {
+    font-size: 14px;
+    margin-bottom: 0;
+    color: #009ADE;
+}
+
+.event hr {
+    margin-bottom: 0;
+}
+
+.event .content .container {
+    width: auto;
+    padding: 0;
+}
+
+.event .content .container div[class*="-offset-"] {
+    margin-left: 0;
+}
+
+.event .content .container div[class*="col-"] {
+    width: 100%;
+}
+
+.event a.event-link {
+    margin: 10px 0 0;
+    display: inline-block;
+}
+
+.event .accent-text:first-letter {
+    font-family: inherit;
+    font-size: 14px;
+    color: #595959;
+    display: inline;
+    line-height: 32px;
+}
+
+#events-list .title-old-events {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.2;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+#events-list .title-old-events a {
+    color: #595959;
+    text-decoration: none;
+}
+
+#events-list .title-old-events a .fa {
+    font-size: 24px;
+    transform: rotate(0deg);
+    transition: transform .5s ease;
+    -o-transition: transform .5s ease;
+    -moz-transition: transform .5s ease;
+    -webkit-transition: transform .5s ease;
+}
+
+#events-list .title-old-events a.open .fa{
+    transform: rotate(180deg);
+}
+
+@media all and (max-width: 767px) {
+    .event .text-left {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+/* News */
+
+.filter-years {
+    border-bottom: 1px solid #ccc;
+}
+
+.filter-years a {
+    border-bottom: 4px solid transparent;
+    padding: 5px 20px 1px;
+    font-weight: bold;
+    display: inline-block;
+    color: #5A5A5A;
+}
+
+
+.filter-years a.active, 
+.filter-years a:hover, 
+.filter-years a:focus {
+    text-decoration: none;
+    border-bottom: 4px solid #009ADE;
+    color: #009ADE;
+}
+
+.wrapper-news-list h2 {
+    margin-bottom: 50px;
+}
+
+.panel-group {
+    margin-top: 20px;
+}
+
+@media all and (max-width:991px) {
+    .panel-group {
+        padding-left: 20px;
+    }
+}
+
+div.panel-collapse {
+    overflow: hidden;
+}
+
+h4.panel-title > a {
+    position: relative;
+}
+
+h4.panel-title > a > i {
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translate(-50%, -30%);
+    font-size: 12px;
+}
+
+h4.panel-title > a[aria-expanded=true] {
+    font-weight: bold;
+}
+
+h4.panel-title > a[aria-expanded=true] > i {
+    transform: translate(-50%, -30%) rotate(90deg);
+}
+
+.panel-body li {
+    font-size: 14px;
+}
+
+.panel-body li.active {
+    font-weight: bold;
+}
+
+.wrapper-news-list {
+    margin-top: 20px;
+}
+
+.rich-text {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #6f6f6f;
+    letter-spacing: 0;
+    line-height: 1.5;
+}
+
+.template-tabbedfolder .schede,
+.hotel-view .schede {
+    margin: 0 -10px 0;
+    min-height: 100vh;
+}
+
+.hotel-view .schede {
+    padding-top: 0;
+}
+
+.hotel-description {
+    font-size: 16px;
+}
+
+.hotel-contacts li {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.hotel-contacts li .fa {
+    line-height: 1.4;
+}
+
+.wrapper-map {
+    background-color: #009ADE;
+}
+
+.wrapper-map .map,
+.wrapper-map #map {
+    margin: 0 -10px;
+}
+
+.hotels-list > .row {
+    position: relative;
+}
+
+.fixed-position {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+
+.bottom-position {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+form#hotel-search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .7);
+    z-index: 100;
+    padding: 15px;
+    margin: 0;
+    width: 100%;
+}
+
+#hotel-search .form-error {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top: 100%;
+    margin: 0;
+    text-align: right;
+    width: 100%;
+    margin: 0 -10px;
+    padding: 0 10px;
+}
+
+a#occupazione {
+    display: block;
+    background-color: #eee;
+    padding: 5px 30px 5px 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    line-height: 20px;
+    color: #444;
+    font-weight: 600;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+a#occupazione:hover {
+    background-color: #009ade;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.slider-images {
+    margin-top: 70px;
+}
+
+.slider-images .image {
+    background-size: cover;
+    background-position: center center;
+    width: 1000px;
+}
+
+.slider-images .image:before {
+    content: "";
+    padding-bottom: 50%;
+    display: block;
+}
+
+.thumbs {
+    margin-bottom: 70px;
+}
+
+.thumb {
+    background-size: cover;
+    background-position: center center;
+    width: 100px;
+    border: 5px solid #FFFFFF;
+}
+
+.thumb:before {
+    content: "";
+    padding-bottom: 100%;
+    display: block;
+}
+
+.slick-current .thumb {
+    border-color: #f4b300;
+}
+
+.hidden-camera,
+.hidden-ospite {
+    display: none;
+}
+
+#occupazione-subform {
+    padding: 0 15px;
+}
+
+#occupazione-subform > .row {
+    margin: 0;
+}
+
+a.update-query {
+    display: inline-block;
+    background-color: #F4B300;
+    color: #FFF;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+a.update-query:hover {
+    background-color: #009ADE;
+    text-decoration: none;
+}
+
+span.label-like {
+    font-size: 14px;
+    display: block;
+}
+
+span.plus-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    line-height: 25px;
+    transform: translateY(-50%);
+    font-size: 36px;
+}
+
+#rooms h2 {
+    margin-bottom: 0;
+}
+
+#rooms .results {
+    margin-bottom: 70px;
+}
+
+#rooms .result .thumb {
+    width: 100%;
+    border: 0;
+    margin: 0;
+}
+
+#rooms .result .thumb:before {
+    padding-bottom: 75%;
+}
+
+#rooms .result h3 {
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+#rooms .result p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+}
+
+#rooms .result ul.features {
+    font-size: 14px;
+    padding: 0 0 0 15px;
+    column-count: 2;
+    column-gap: 30px;
+    column-fill: balance;
+}
+
+#rooms .result h4 {
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+#rooms .result p.price {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 42px;
+    text-align: center;
+}
+
+#query {
+    margin-bottom: 0;
+}
+
+/* NEWSLETTER OLD */
+
+.newsletter-form input[type="submit"] {
+    display: block;
+    width: 100%;
+    height: 34px;
+    background: rgb(34, 36, 49);
+    border: 0;
+    color: #fff;
+    font-weight: 600;
+}
+
+.newsletter-form input#id_email {
+    border-radius: 0;
+    border: 0;
+    background-color: rgba(255,255,255,.5);
+    color: #000;
+    margin-right: -9px;
+}
+
+.newsletter-form p.errors {
+    text-align: center;
+    font-size: 14px;
+    color: #f4b300;
+    margin: 10px 0;
+}
+
+.newsletter-form input[type="radio"], 
+.newsletter-form input[type="checkbox"] {
+    margin: 0 0 0 -20px;
+    margin-top: 1px \9;
+    line-height: normal;
+}
+
+.newsletter-form {
+    margin-top: 42px;
+}
+
+.newsletter-form label {
+    font-size: 16px;
+}
+
+.newsletter-form input#id_email::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #222431;
+}
+.newsletter-form input#id_email::-moz-placeholder { /* Firefox 19+ */
+    color: #222431;
+}
+.newsletter-form input#id_email:-ms-input-placeholder { /* IE 10+ */
+    color: #222431;
+}
+.newsletter-form input#id_email:-moz-placeholder { /* Firefox 18- */
+    color: #222431;
+}
+
+/* NEWSLETTER MAILCHIMP */
+
+#mc_embed_signup {
+    margin-top: 42px;
+}
+
+#mc_embed_signup .mc-field-group {
+    text-align: left;
+}
+
+#mc_embed_signup .mc-field-group label {
+    font-family: 'raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#mc_embed_signup .mc-field-group input {
+    border-radius: 0;
+    border: 0;
+    background-color: rgba(255,255,255,.5);
+    color: #000;
+    outline: none;
+}
+
+#mc_embed_signup .mc-field-group input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #222431;
+}
+#mc_embed_signup .mc-field-group input::-moz-placeholder { /* Firefox 19+ */
+    color: #222431;
+}
+#mc_embed_signup .mc-field-group input:-ms-input-placeholder { /* IE 10+ */
+    color: #222431;
+}
+#mc_embed_signup .mc-field-group input:-moz-placeholder { /* Firefox 18- */
+    color: #222431;
+}
+
+#mc_embed_signup .mc-field-group li {
+    text-align: center;
+}
+
+#mc-embedded-subscribe {
+    display: block;
+    width: 100%;
+    height: 34px;
+    background: rgb(34, 36, 49);
+    border: 0;
+    color: #fff;
+    font-family: 'raleway', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 0 !important;
+    text-transform: uppercase;
+}
+
+p.message {
+    font-weight: 600;
+}
+
+.informative a {
+    margin: 0 20px;
+}
+.informative {
+    margin-top: 20px;
+}
+
+.event .content p, 
+.event .content ul, 
+.event .content li {
+    font-size: 14px;
+}
+
+.event iframe {
+    width: 100%;
+    border: 0;
+}
+
+.event object {
+    width: 100%;
+}
+
+.event img {
+    height: auto;
+    padding: 5px;
+    border: 1px solid #EFEFEF;
+}
+
+.event h2 {
+    font-size: 24px;
+}
+
+.event h1 {
+    font-size: 24px;
+    margin: 10px 0;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+/* Cambiamente */
+.event a.more-button {
+    background-image: url(/images/blue_brush.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #FFF;
+    padding: 2px 20px;
+    display: inline-block;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.event a.more-button .fa {
+    transform: rotate(0deg);
+    transition: transform .5s ease;
+    -o-transition: transform .5s ease;
+    -moz-transition: transform .5s ease;
+    -webkit-transition: transform .5s ease;
+}
+
+.event a.more-button.active .fa {
+    transform: rotate(180deg);
+}
+
+/* Cambiamente */
+.event a.more-button:hover {
+    background-image: url(/images/yellow_brush.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#e-beach-frame {
+    display: block;
+    /* height: 100vh; */
+    width: 100%;
+    border: 0;
+    min-height: 750px;
+}
+
+a.all-details {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    padding-right: 25px;
+    text-decoration: none;
+}
+
+a.btn-book,
+button.btn-book {
+    display: inline-block;
+    background-color: #F4B300;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    width: 100%;
+    text-align: center;
+    border: 0;
+    text-decoration: none;
+}
+
+.price-by-service {
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 0;
+    padding: 0 5px;
+    display: block;
+    color: #009be1;
+    background-color: #ffffff;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAI0lEQVQYV2NkQAazHxozwvmzHxozpMqfhQhAOSAmIzIHJAAAPdQKtGm0wv0AAAAASUVORK5CYII=), url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAPUlEQVQoU2NkIBIwEqmOgQSFsx/+J8ZUiImEFKfKMyKsxqU4VR6sBtWN6IqhijAVIjsDSRF2hTh8RnTwAACrfw6GhVhosgAAAABJRU5ErkJggg==);
+    background-repeat: repeat, no-repeat;
+    -webkit-appearance: none;
+    background-position: center center, 95% center;
+    -webkit-border-radius: 0px;
+    border: solid #009be1;
+    border-width: 1px 1px 0px 1px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 18px;
+    cursor: pointer;
+    outline: none;
+}
+
+.filter-schede {
+    text-align: center;
+    padding: 30px 0 10px;
+    background-color: #fafafa;
+    margin: 0 -10px;
+}
+
+.filter-schede label {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.filter-schede .wrapper-select {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.filter-schede select {
+    background: #eee;
+    border: none;
+    padding: 5px;
+    height: 30px;
+    color: #444;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: none;
+    width: 150px;
+}
+
+.offer-view.noposter main > .big-container:first-child {
+    margin-top: 90px;
+    margin-bottom: 70px;
+}
+
+.offer-view .wrapper-poster {
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.offer-view .wrapper-poster::before {
+    content: '';
+    padding-bottom: 100%;
+    display: block;
+}
+
+.offer-view .wrapper-info {
+    padding-left: 50px;
+}
+
+/* Cambiamente */
+.offer-view .wrapper-info h1 {
+    font-family: 'JustAnotherHand';
+    font-size: 90px;
+    color: #595959;
+    line-height: .8;
+    letter-spacing: -0.5px;
+}
+
+.offer-view .wrapper-info h2 {
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.offer-view .infos {
+    position: relative;
+}
+
+.offer-view .infos h2, 
+.offer-view .infos p {
+    padding-right: 200px;
+}
+
+.offer-view .infos .price {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 34px;
+}
+
+.offer-view .wrapper-info h4 {
+
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-size: 32px;
+    font-weight: 600;
+
+}
+
+.offer-view .period {
+    margin-top: 50px;
+}
+
+#guest-form .form-control {
+    border-radius: 0;
+    box-shadow: none;
+    padding: 5px 10px;
+    height: 40px;
+    /* margin-bottom: 15px; */
+}
+
+#guest-form .text-center label {
+    display: inline-block;
+    margin: 0 10px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+#guest-form p.error {
+    color: red;
+    font-size: 13px;
+    position: absolute;
+}
+
+#guest-form .text-center p.error {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#guest-form .form-group {
+    margin-bottom: 35px;
+}
+
+#guest-form .text-center label input {
+    width: 12px;
+    margin-right: 6px;
+}
+
+#guest-form .checkbox label {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+#confirmation-form input[type="submit"],
+#guest-form input[type="submit"],
+#review-guest-form input[type="submit"] {
+    background-color: #009ade;
+    color: #FFF;
+    font-weight: 600;
+    border: 0;
+    padding: 7.5px 10px;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+p.people {
+    background-position: left center;
+    background-size: auto 80%;
+    background-repeat: no-repeat;
+    font-size: 16px !important;
+    line-height: 26px;
+}
+
+p.people.people-1 {
+    background-image: url(../img/people-1.svg);
+    padding: 0 0 0 30px; 
+}
+
+p.people.people-2 {
+    background-image: url(../img/people-2.svg);
+    padding: 0 0 0 42px; 
+}
+
+p.people.people-3 {
+    background-image: url(../img/people-3.svg);
+    padding: 0 0 0 54px; 
+}
+
+p.people.people-4 {
+    background-image: url(../img/people-4.svg);
+    padding: 0 0 0 66px; 
+}
+
+p.people.people-5 {
+    background-image: url(../img/people-5.svg);
+    padding: 0 0 0 78px; 
+}
+
+p.people.people-6 {
+    background-image: url(../img/people-6.svg);
+    padding: 0 0 0 90px; 
+}
+
+p.people.people-7 {
+    background-image: url(../img/people-7.svg);
+    padding: 0 0 0 102px; 
+}
+
+p.people.people-8 {
+    background-image: url(../img/people-8.svg);
+    padding: 0 0 0 114px; 
+}
+
+p.people.people-9 {
+    background-image: url(../img/people-9.svg);
+    padding: 0 0 0 126px; 
+}
+
+p.people.people-10 {
+    background-image: url(../img/people-10.svg);
+    padding: 0 0 0 138px; 
+}
+
+.table-summary th, .table-summary td {
+    border-color: #FFFFFF !important;
+    padding: 10px 0 !important;
+}
+
+.booking-actions .btn.btn-default {
+    background-color: #009ade;
+    color: #FFF;
+    font-weight: 600;
+    border: 0;
+    padding: 7.5px 10px;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 0;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+.booking-actions .btn.btn-default:focus,
+.booking-actions .btn.btn-default:hover {
+    background-color: #009ade;
+    color: #FFF;
+}
+
+img.payment-success-icon,
+img.payment-failure-icon,
+img.session-expired {
+    margin: 0 auto;
+    display: block;
+    width: 80px;
+    margin-top: 60px;
+}
+
+h4.payment-success-message,
+h4.payment-failure-message,
+h4.session-expired-message {
+    font-size: 25px !important;
+    margin: 30px 0 10px !important;
+}
+
+.wrapper-payment-result {
+    margin-top: 80px;
+    margin-bottom: 135px;
+}
+
+@media all and (max-width: 991px) {
+    .hotels-list {
+        overflow: hidden;
+    }
+
+    form#hotel-search {
+        position: static;
+        border-bottom: 1px solid #CCCCCC;
+        margin: 0 -15px;
+        width: auto;
+    }
+
+    .offer-view .wrapper-poster::before {
+        content: '';
+        padding-bottom: 40%;
+        display: block;
+    }
+
+    .offer-view .wrapper-info {
+        padding-left: 10px;
+    }
+
+}
+
+@media all and (max-width: 767px) {
+    #single-hotel-search .form-group, #hotel-search .form-group {
+        width: 100%;
+    }
+
+    #single-hotel-search button[type=submit], #hotel-search button[type=submit] {
+        width: 30%;
+        display: block;
+        margin: 30px auto 0;
+    }
+
+    .static-maps {
+        margin: 50px auto;
+        display: block;
+    }
+
+    #rooms .result h3 {
+        margin: 15px 0 15px 0;
+        font-weight: 600;
+    }
+
+    #rooms .result p.price {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    #rooms .result form {
+        text-align: center;
+    }
+
+    .hotel-services {
+        column-count: 1;
+    }
+
+    #rooms .result ul.features {
+        column-count: 1;
+    }
+
+    #rooms .result .thumb:before {
+        padding-bottom: 40%;
+    }
+
+    .table-summary {
+        border: 1px solid transparent;
+    }
+
+    .table-summary th, .table-summary td {
+        display: block;
+    }
+
+    .table-summary th {
+        padding-bottom: 0 !important;
+    }
+
+    .table-summary td {
+        padding-top: 0 !important;
+    }
+
+    .offer-view .infos h2, .offer-view .infos p {
+        padding-right: 0;
+    }
+}
+
+@media all and (max-width: 500px) {
+
+    .filter-schede .wrapper-select {
+        display: block;
+        margin: 0 20px; 
+    }
+
+    .filter-schede label {
+        font-size: 14px;
+        font-weight: 400;
+        width: 40%;
+        text-align: left;
+    }
+
+    .filter-schede select {
+        width: 50%;
+    }
+
+    .ospitalita h3, .ombrelloni h3 {
+        font-size: 6.2vw;
+        padding: 6vw 0;
+        height: auto;
+        background-size: auto 100%;
+    }
+
+    .informative a {
+        display: block;
+        line-height: 1.8;
+    }
+}
+
+
+.template-sezione-approfondimenti .breadcrumbs{
+    margin-bottom: 0;
+}
+.template-sezione-approfondimenti .hotels-list .schede {
+    margin-top: 0;
+}
+
+/* BACKGROUND SKETCHES */
+/* Cambiamente inizia */
+.img_sketch_sm, .img_sketch_md, .img_sketch_lg {
+    position: absolute;
+} 
+
+@media (max-width: 1200px) {
+    .img_sketch_sm {
+    display: none;
+    }
+    .img_right {
+        display: none;
+  }
+}
+
+  @media (max-width: 992px) {
+    .img_sketch_sm, .img_sketch_md, .img_sketch_lg {
+    display: none;
+    }
+  }
+/* Cambiamente finisce*/
