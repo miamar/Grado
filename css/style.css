@@ -4410,4 +4410,17 @@ h4.session-expired-message {
     display: none;
     }
   }
+
+
+@media (max-width: 1200px) {
+    .audioguide-path {
+        margin-top: 10%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .audioguide-path {
+        visibility: hidden;
+    }
+}
 /* Cambiamente finisce*/
